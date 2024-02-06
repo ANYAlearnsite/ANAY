@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Admin from './components/admin';
-import User from './components/user';
+import Login from './components/Login.jsx';
+import Admin from './components/Admin.jsx';
+import User from './components/User.jsx';
 
 
 function App() {

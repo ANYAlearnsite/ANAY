@@ -18,7 +18,7 @@ const Login = () => {
       if (response.status === 200) {
         console.log(response.data);
         localStorage.setItem('token', response.data.jwt_user)
-        navigate('/nour')
+        navigate('/admin')
       }
     }
     catch (err) {

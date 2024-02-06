@@ -18,8 +18,14 @@ const getuser =(x)=>{
     return con.query(sql,x)
 }
 
+const getall = ()=>{
+    const sql = `SELECT * FROM user `
+    return con.query(sql)
+}
+
 
 module.exports = {
     singup : singup,
-    getuser : getuser
+    getuser : getuser,
+    getall :getall
 }

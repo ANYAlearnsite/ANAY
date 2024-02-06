@@ -48,6 +48,16 @@ module.exports = {
         } catch (err) {
             console.log('err in getting user ', err);
         }
+    },
+
+    GetAll : async (req , res)=>{
+        try{
+            const result = await db.getall()
+            res.status(200).send(result[0])
+        }
+        catch(err){
+            throw (err)
+        }
     }
     
 
