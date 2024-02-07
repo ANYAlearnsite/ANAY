@@ -12,17 +12,18 @@ module.exports = {
         try {
             const p = req.body.pwd
             const hashpwd = await bycribt.hash(p, 10,)
-            const result = db.singup([req.body.name,hashpwd,req.body.role])
+            const result = db.singup([req.body.name,hashpwd,req.body.role,req.body.email])
                 res.status(200).send('user cerated !')
         }
         catch (err) {
             console.log('err in creating user ', err);
         }
     },
+    // get user to log in 
     GetUser: async (req, res) => {
         try {
            
-            const result = await db.getuser(req.body.name);
+            const result = await db.getuser(req.body.email);
           
             console.log('2',req.body.pwd);
             if (result && result.length > 0 ) {
