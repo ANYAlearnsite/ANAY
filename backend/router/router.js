@@ -9,8 +9,6 @@ const authenticateToken = (req, res, next) => {
     if (!token) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
-  
-
     //token.split(' ')[1]
     // need to  add this while im finish the front req !
 
@@ -24,7 +22,7 @@ const authenticateToken = (req, res, next) => {
       next();
     });
   };
-
+  
 Routermain.post('/create',controller.sign_up_post)
 // login user 
 Routermain.post('/getuser',controller.GetUser)

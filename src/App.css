@@ -1,3 +1,4 @@
+/* 
 .App {
   text-align: center;
   height: 100hv;
@@ -47,7 +48,7 @@
  }
  
  /*Inputs*/
- .field {
+ /* .field {
   margin-top: .5rem;
   display: flex;
   align-items: center;
@@ -72,16 +73,16 @@
   color: #d3d3d3;
  }
  
- /*Text*/
+
  .title {
   margin-bottom: 1rem;
   font-size: 1.5em;
   font-weight: 500;
   color: #f5f5f5;
- }
- 
- /*Buttons*/
- .btn {
+ } */
+  
+
+ /* .btn {
   margin: 1rem;
   border: none;
   border-radius: 4px;
@@ -103,7 +104,7 @@
  }
  
  /*Hover & focus*/
- .field input:focus::placeholder {
+ /* .field input:focus::placeholder {
   opacity: 0;
   transition: opacity .3s;
  }
@@ -117,4 +118,4 @@
  .btn-link:hover {
   color: #ffeba7;
  }
- 
+   */

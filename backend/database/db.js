@@ -7,14 +7,14 @@ var con = mysql.createConnection({
   database: "learn"
 }).promise();
 
-const singup =([X,Y,Z])=>{
-    const sql = 'INSERT INTO user (name, pwd, role) VALUES (?, ?, ?)';
-    con.query(sql,[X,Y,Z])
+const singup =([X,Y,Z,W])=>{
+    const sql = 'INSERT INTO user (name, pwd, role,email) VALUES (?, ?, ?, ?)';
+    con.query(sql,[X,Y,Z,W])
 }
 
 
 const getuser =(x)=>{
-    const sql = `SELECT * FROM user WHERE name = ?`
+    const sql = `SELECT * FROM user WHERE email = ?`
     return con.query(sql,x)
 }
 
