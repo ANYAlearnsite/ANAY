@@ -6,6 +6,9 @@ import User from './components/User.jsx';
 import NavBar from './components/NavBar.jsx'
 import IntroPage from './components/IntroPage.jsx';
 import Submit from './components/Submituser.jsx'
+import Test from './components/testpages/Test.jsx';
+import Testlvl from './components/testpages/Testlvl.jsx';
+import Quiz from './components/testpages/Quiz.jsx';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User/>}/>
       <Route path="/submit" element={<Submit/>}/>
+      <Route path='/test' element={<Test/>}/>
+      <Route path= "/test/:lan" element={<Testlvl/>}/>
+      <Route  path='/test/:languge/:level' element={<Quiz/>}/>
       </Routes>
       
       </Router>
