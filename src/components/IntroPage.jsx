@@ -1,12 +1,15 @@
 import React from 'react';
 import img from '../images/img_intro.jpg';
 
+
 import Fotter from './Fotter';
 import NavBar from './NavBar';
 const IntroPage = () => {
+   
     return (
         <div>
             <NavBar/>
+           
             <div className="flex flex-col items-center justify-start h-screen pt-16 bg-gradient-to-r from-cyan-500 to-blue-500">
                 <div className="welcome text-center">
                     <h2 className="text-4xl font-bold mb-6 mr-2">Welcome to ANAY Learn</h2>
