@@ -6,9 +6,9 @@ import User from './components/User.jsx';
 import NavBar from './components/NavBar.jsx'
 import IntroPage from './components/IntroPage.jsx';
 import Submit from './components/Submituser.jsx'
-import Update from './components/Update.jsx'
 import { useState } from 'react';
 import Lesson from './components/Lesson.jsx'; 
+import Updateuser from './components/Updateuser.jsx';
 
 
 
@@ -28,8 +28,8 @@ function App() {
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User publicId={publicId}/>}/>
       <Route path="/submit" element={<Submit/>}/>
-      <Route path="/Update" element={<Update setPublicId={setPublicId}/>}/>
-      <Route path="/lesson" element={<Lesson/>}/>
+      <Route path="/Updateuser" element={<Updateuser setPublicId={setPublicId}/>}/>
+      <Route path="/lessonuser" element={<Lesson/>}/>
       </Routes>
       
       </Router>

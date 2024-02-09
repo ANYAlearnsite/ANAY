@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const InputCard = ({setPublicId}) => {
+const Updateuser= ({setPublicId}) => {
   const [image, setImage] = useState(null);
  
 
@@ -70,5 +70,5 @@ const InputCard = ({setPublicId}) => {
   );
 };
 
-export default InputCard;
+export default Updateuser;
 
