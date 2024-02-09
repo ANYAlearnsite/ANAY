@@ -18,9 +18,16 @@ const Test = () => {
       <NavBaruser />
       <div className=" bg-gradient-to-r bg-cyan-400">
         <div>
-          {" "}
-          <h1 className="text-center ">hello </h1>
-          <div className="flex justify-center items-center h-screen">
+        <div>
+       
+      </div>
+          <div className="flex justify-center items-center h-screen ">
+          <div className="text-white text-center">
+          <h1 className="text-4xl font-bold mt">Welcome to Our lecture Zone!</h1>
+          <p className="text-lg">
+           improuve your knowledge and have fun with our lecture.
+          </p>
+        </div>
             <div className="text-center w-64 m-4 rounded overflow-hidden shadow-lg">
               <img
                 className="w-full"
