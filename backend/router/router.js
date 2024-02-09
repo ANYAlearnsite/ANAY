@@ -26,6 +26,7 @@ const authenticateToken = (req, res, next) => {
 Routermain.post('/create',controller.sign_up_post)
 // login user 
 Routermain.post('/getuser',controller.GetUser)
+
 // get all 
 Routermain.get('/getusers',authenticateToken,controller.GetAll)
 
