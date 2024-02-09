@@ -1,9 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import NavBaruser from "./NavBaruser";
+
+import React,{useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import NavBaruser from './NavBaruser.jsx';
+
+
 import { jwtDecode } from "jwt-decode";
 import Fotter from "./Fotter";
+const Admin = () => {
+    
+
+const token = localStorage.getItem("token");
+
+  const [userInfo, setUserInfo] = useState("");
+  const [data , setData] = useState('')
 
 
   const token = localStorage.getItem("token");

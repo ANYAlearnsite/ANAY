@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './NavBar.jsx';
 
 
-
+  
 const Login = () => {
   const [email, setEmail] = useState('')
   const [pwd, setPwd] = useState('')
