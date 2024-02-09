@@ -1,0 +1,285 @@
+{
+    "A1": [
+      {
+        "text": "Какого цвета небо?",
+        "options": [
+          {"id": 0, "text": "Синее", "isCorrect": true},
+          {"id": 1, "text": "Красное", "isCorrect": false},
+          {"id": 2, "text": "Зеленое", "isCorrect": false},
+          {"id": 3, "text": "Желтое", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Сколько пальцев у человека?",
+        "options": [
+          {"id": 0, "text": "Два", "isCorrect": false},
+          {"id": 1, "text": "Пять", "isCorrect": true},
+          {"id": 2, "text": "Десять", "isCorrect": false},
+          {"id": 3, "text": "Восемь", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какое животное живет в воде?",
+        "options": [
+          {"id": 0, "text": "Слон", "isCorrect": false},
+          {"id": 1, "text": "Рыба", "isCorrect": true},
+          {"id": 2, "text": "Лев", "isCorrect": false},
+          {"id": 3, "text": "Обезьяна", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Чем пишут?",
+        "options": [
+          {"id": 0, "text": "Кистью", "isCorrect": false},
+          {"id": 1, "text": "Бумагой", "isCorrect": true},
+          {"id": 2, "text": "Камнем", "isCorrect": false},
+          {"id": 3, "text": "Воздухом", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какой месяц посередине года?",
+        "options": [
+          {"id": 0, "text": "Январь", "isCorrect": false},
+          {"id": 1, "text": "Июнь", "isCorrect": true},
+          {"id": 2, "text": "Октябрь", "isCorrect": false},
+          {"id": 3, "text": "Декабрь", "isCorrect": false}
+        ]
+      }
+    ],
+    "A2": [
+      {
+        "text": "Как противоположность 'счастливого'?",
+        "options": [
+          {"id": 0, "text": "Грустный", "isCorrect": true},
+          {"id": 1, "text": "Злой", "isCorrect": false},
+          {"id": 2, "text": "Взволнованный", "isCorrect": false},
+          {"id": 3, "text": "Смешной", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какой континент известен как 'Страна восходящего солнца'?",
+        "options": [
+          {"id": 0, "text": "Европа", "isCorrect": false},
+          {"id": 1, "text": "Азия", "isCorrect": true},
+          {"id": 2, "text": "Африка", "isCorrect": false},
+          {"id": 3, "text": "Северная Америка", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Сколько сторон у прямоугольника?",
+        "options": [
+          {"id": 0, "text": "Две", "isCorrect": false},
+          {"id": 1, "text": "Три", "isCorrect": false},
+          {"id": 2, "text": "Четыре", "isCorrect": true},
+          {"id": 3, "text": "Пять", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая планета известна как 'Красная планета'?",
+        "options": [
+          {"id": 0, "text": "Земля", "isCorrect": false},
+          {"id": 1, "text": "Марс", "isCorrect": true},
+          {"id": 2, "text": "Венера", "isCorrect": false},
+          {"id": 3, "text": "Юпитер", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто написал 'Ромео и Джульетту'?",
+        "options": [
+          {"id": 0, "text": "Чарльз Диккенс", "isCorrect": false},
+          {"id": 1, "text": "Уильям Шекспир", "isCorrect": true},
+          {"id": 2, "text": "Джейн Остин", "isCorrect": false},
+          {"id": 3, "text": "Марк Твен", "isCorrect": false}
+        ]
+      }
+    ],
+    "B1": [
+      {
+        "text": "Какой источник возобновляемой энергии идет от Солнца?",
+        "options": [
+          {"id": 0, "text": "Ветер", "isCorrect": false},
+          {"id": 1, "text": "Гидроэнергия", "isCorrect": false},
+          {"id": 2, "text": "Солнечная", "isCorrect": true},
+          {"id": 3, "text": "Геотермальная", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто является автором 'Убить пересмешника'?",
+        "options": [
+          {"id": 0, "text": "Харпер Ли", "isCorrect": true},
+          {"id": 1, "text": "Дж. К. Роулинг", "isCorrect": false},
+          {"id": 2, "text": "Джордж Оруэлл", "isCorrect": false},
+          {"id": 3, "text": "Эрнест Хемингуэй", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая столица Германии?",
+        "options": [
+          {"id": 0, "text": "Мадрид", "isCorrect": false},
+          {"id": 1, "text": "Берлин", "isCorrect": true},
+          {"id": 2, "text": "Рим", "isCorrect": false},
+          {"id": 3, "text": "Париж", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какой газ является ответственным за парниковый эффект?",
+        "options": [
+          {"id": 0, "text": "Кислород", "isCorrect": false},
+          {"id": 1, "text": "Азот", "isCorrect": false},
+          {"id": 2, "text": "Метан", "isCorrect": true},
+          {"id": 3, "text": "Гелий", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "В каком году закончилась Вторая мировая война?",
+        "options": [
+          {"id": 0, "text": "1943", "isCorrect": false},
+          {"id": 1, "text": "1945", "isCorrect": true},
+          {"id": 2, "text": "1948", "isCorrect": false},
+          {"id": 3, "text": "1950", "isCorrect": false}
+        ]
+      }
+    ],
+    "B2": [
+      {
+        "text": "Кто нарисовал 'Мону Лизу'?",
+        "options": [
+          {"id": 0, "text": "Винсент ван Гог", "isCorrect": false},
+          {"id": 1, "text": "Леонардо да Винчи", "isCorrect": true},
+          {"id": 2, "text": "Пабло Пикассо", "isCorrect": false},
+          {"id": 3, "text": "Клод Моне", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая река является самой длинной в мире?",
+        "options": [
+          {"id": 0, "text": "Амазонка", "isCorrect": true},
+          {"id": 1, "text": "Нил", "isCorrect": false},
+          {"id": 2, "text": "Янцзы", "isCorrect": false},
+          {"id": 3, "text": "Миссисипи", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто написал '1984'?",
+        "options": [
+          {"id": 0, "text": "Джордж Оруэлл", "isCorrect": true},
+          {"id": 1, "text": "Олдос Хаксли", "isCorrect": false},
+          {"id": 2, "text": "Рэй Брэдбери", "isCorrect": false},
+          {"id": 3, "text": "Эрнест Хемингуэй", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая валюта в Японии?",
+        "options": [
+          {"id": 0, "text": "Вон", "isCorrect": false},
+          {"id": 1, "text": "Юань", "isCorrect": false},
+          {"id": 2, "text": "Иена", "isCorrect": true},
+          {"id": 3, "text": "Ринггит", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая планета известна как 'Красная планета'?",
+        "options": [
+          {"id": 0, "text": "Земля", "isCorrect": false},
+          {"id": 1, "text": "Марс", "isCorrect": true},
+          {"id": 2, "text": "Венера", "isCorrect": false},
+          {"id": 3, "text": "Юпитер", "isCorrect": false}
+        ]
+      }
+    ],
+    "C1": [
+      {
+        "text": "Кто выиграл Нобелевскую премию по физике в 1921 году за объяснение фотоэлектрического эффекта?",
+        "options": [
+          {"id": 0, "text": "Альберт Эйнштейн", "isCorrect": true},
+          {"id": 1, "text": "Нильс Бор", "isCorrect": false},
+          {"id": 2, "text": "Вернер Гейзенберг", "isCorrect": false},
+          {"id": 3, "text": "Мария Кюри", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "В каком году упала Берлинская стена, приведшая к воссоединению Германии?",
+        "options": [
+          {"id": 0, "text": "1989", "isCorrect": true},
+          {"id": 1, "text": "1991", "isCorrect": false},
+          {"id": 2, "text": "1985", "isCorrect": false},
+          {"id": 3, "text": "1993", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто написал пьесу 'В ожидании Годо'?",
+        "options": [
+          {"id": 0, "text": "Сэмюэл Беккет", "isCorrect": true},
+          {"id": 1, "text": "Антон Чехов", "isCorrect": false},
+          {"id": 2, "text": "Уильям Шекспир", "isCorrect": false},
+          {"id": 3, "text": "Генрик Ибсен", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая столица Австралии?",
+        "options": [
+          {"id": 0, "text": "Сидней", "isCorrect": false},
+          {"id": 1, "text": "Мельбурн", "isCorrect": false},
+          {"id": 2, "text": "Канберра", "isCorrect": true},
+          {"id": 3, "text": "Брисбен", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто была первой женщиной, получившей Нобелевскую премию?",
+        "options": [
+          {"id": 0, "text": "Мария Кюри", "isCorrect": true},
+          {"id": 1, "text": "Розалинд Франклин", "isCorrect": false},
+          {"id": 2, "text": "Дороти Кроуфут Ходжкин", "isCorrect": false},
+          {"id": 3, "text": "Барбара Мак-Клинток", "isCorrect": false}
+        ]
+      }
+    ],
+    "C2": [
+      {
+        "text": "Какая столица Бутана?",
+        "options": [
+          {"id": 0, "text": "Тхимпху", "isCorrect": true},
+          {"id": 1, "text": "Катманду", "isCorrect": false},
+          {"id": 2, "text": "Дакка", "isCorrect": false},
+          {"id": 3, "text": "Коломбо", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто написал роман 'Сто лет одиночества'?",
+        "options": [
+          {"id": 0, "text": "Габриэль Гарсиа Маркес", "isCorrect": true},
+          {"id": 1, "text": "Исабель Альенде", "isCorrect": false},
+          {"id": 2, "text": "Хорхе Луис Борхес", "isCorrect": false},
+          {"id": 3, "text": "Пабло Неруда", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "В каком году началась Французская революция?",
+        "options": [
+          {"id": 0, "text": "1776", "isCorrect": false},
+          {"id": 1, "text": "1789", "isCorrect": true},
+          {"id": 2, "text": "1798", "isCorrect": false},
+          {"id": 3, "text": "1804", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Какая самая большая пустыня в мире?",
+        "options": [
+          {"id": 0, "text": "Сахара", "isCorrect": true},
+          {"id": 1, "text": "Гоби", "isCorrect": false},
+          {"id": 2, "text": "Аравийская", "isCorrect": false},
+          {"id": 3, "text": "Антарктика", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Кто нарисовал 'Мону Лизу'?",
+        "options": [
+          {"id": 0, "text": "Леонардо да Винчи", "isCorrect": true},
+          {"id": 1, "text": "Винсент ван Гог", "isCorrect": false},
+          {"id": 2, "text": "Пабло Пикассо", "isCorrect": false},
+          {"id": 3, "text": "Клод Моне", "isCorrect": false}
+        ]
+      }
+    ]
+  }
+  

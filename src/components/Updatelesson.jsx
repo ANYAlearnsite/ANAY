@@ -8,7 +8,7 @@ const Updatelesson = () => {
   const [newurl, setnewurl] = useState("");
   const { id } = useParams();
 const updateeee=()=>{
-    axios.put(`http://localhost:3600/updatelesson/${id}`,{urlvid:newurl}).then(()=>{
+    axios.put(`http://localhost:3600/admin/updatelesson/${id}`,{urlvid:newurl}).then(()=>{
         console.log("url updated");
     }).catch((err)=>{
         console.log(err);

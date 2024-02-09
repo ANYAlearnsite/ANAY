@@ -7,7 +7,7 @@ const UpdateRole = () => {
   const { id } = useParams();
 
   const updatedd = () => {
-    axios.put(`http://localhost:3600/update/${id}`, { role: newrole })
+    axios.put(`http://localhost:3600/admin/update/${id}`, { role: newrole })
       .then(() => {
         console.log("updated");
       })

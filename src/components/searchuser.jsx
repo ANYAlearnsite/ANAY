@@ -11,7 +11,7 @@ const Searchuser = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3600/one/${name}`)
+    axios.get(`http://localhost:3600/admin/one/${name}`)
       .then((res) => {
         console.log("found");
         console.log(res.data[0]);

@@ -10,7 +10,7 @@ const Users = () => {
   const [userToDelete, setUserToDelete] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3600/allusers")
+    axios.get("http://localhost:3600/admin/allusers")
       .then((results) => {
         console.log('data fetched');
         setdatausers(results.data[0]);
@@ -27,7 +27,7 @@ const Users = () => {
 
   const confirmDelete = () => {
     if (userToDelete) {
-      axios.delete(`http://localhost:3600/delet/${userToDelete.iduser}`)
+      axios.delete(`http://localhost:3600/admin/delet/${userToDelete.iduser}`)
         .then(() => {
           console.log("User deleted");
           setrefresh(!refresh);

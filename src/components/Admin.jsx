@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import "./Admin.css"
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import NavBaruser from './NavBaruser';

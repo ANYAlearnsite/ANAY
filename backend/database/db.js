@@ -27,6 +27,6 @@ const getall = ()=>{
 module.exports = {
     singup : singup,
     getuser : getuser,
-    getall :getall
-}
-module.exports=con
+    getall :getall}
+    
+    module.exports=con

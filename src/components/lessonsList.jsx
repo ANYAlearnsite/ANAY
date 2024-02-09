@@ -7,7 +7,7 @@ const LessonsList = () => {
   const [searchTerm, setSearchTerm] = useState("");
 const [refresh,setrefresh]=useState(false)
   useEffect(() => {
-    axios.get('http://localhost:3600/alllessons')
+    axios.get('http://localhost:3600/admin/alllessons')
       .then((results) => {
         console.log("Lessons fetched");
         setdatalessons(results.data[0]);
@@ -19,11 +19,10 @@ const [refresh,setrefresh]=useState(false)
 
 
   const haendlDeleteLesson = (id) => {
-    axios.delete(`http://localhost:3600/alllessons/${id}`)
+    axios.delete(`http://localhost:3600/admin/alllessons/${id}`)
       .then(() => {
         console.log("Lesson deleted");
-        // Refresh the lessons list after deletion
-        axios.get('http://localhost:3600/alllessons')
+        axios.get('http://localhost:3600/admin/alllessons')
           .then((results) => {
             setdatalessons(results.data[0]);
           })
