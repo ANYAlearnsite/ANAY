@@ -31,7 +31,7 @@ function App() {
       <Route path="/user" element={<User publicId={publicId}/>}/>
       <Route path="/submit" element={<Submit/>}/>
       <Route path="/Updateuser" element={<Updateuser setPublicId={setPublicId}/>}/>
-      <Route path="/lessonuser" element={<Lesson/>}/>
+      <Route path="/lessonuser" element={<Lesson/>}/>  
       </Routes>
       
       </Router>
