@@ -1,0 +1,285 @@
+{
+    "A1": [
+      {
+        "text": "Welche Farbe hat der Himmel?",
+        "options": [
+          {"id": 0, "text": "Blau", "isCorrect": true},
+          {"id": 1, "text": "Rot", "isCorrect": false},
+          {"id": 2, "text": "Grün", "isCorrect": false},
+          {"id": 3, "text": "Gelb", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wie viele Finger hat eine Person?",
+        "options": [
+          {"id": 0, "text": "Zwei", "isCorrect": false},
+          {"id": 1, "text": "Fünf", "isCorrect": true},
+          {"id": 2, "text": "Zehn", "isCorrect": false},
+          {"id": 3, "text": "Acht", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welches Tier lebt im Wasser?",
+        "options": [
+          {"id": 0, "text": "Elefant", "isCorrect": false},
+          {"id": 1, "text": "Fisch", "isCorrect": true},
+          {"id": 2, "text": "Löwe", "isCorrect": false},
+          {"id": 3, "text": "Affe", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was benutzt man zum Schreiben?",
+        "options": [
+          {"id": 0, "text": "Pinsel", "isCorrect": false},
+          {"id": 1, "text": "Papier", "isCorrect": true},
+          {"id": 2, "text": "Stein", "isCorrect": false},
+          {"id": 3, "text": "Luft", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welcher Monat liegt in der Mitte des Jahres?",
+        "options": [
+          {"id": 0, "text": "Januar", "isCorrect": false},
+          {"id": 1, "text": "Juni", "isCorrect": true},
+          {"id": 2, "text": "Oktober", "isCorrect": false},
+          {"id": 3, "text": "Dezember", "isCorrect": false}
+        ]
+      }
+    ],
+    "A2": [
+      {
+        "text": "Was ist das Gegenteil von 'glücklich'?",
+        "options": [
+          {"id": 0, "text": "Traurig", "isCorrect": true},
+          {"id": 1, "text": "Wütend", "isCorrect": false},
+          {"id": 2, "text": "Aufgeregt", "isCorrect": false},
+          {"id": 3, "text": "Lustig", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welcher Kontinent wird als das 'Land der aufgehenden Sonne' bezeichnet?",
+        "options": [
+          {"id": 0, "text": "Europa", "isCorrect": false},
+          {"id": 1, "text": "Asien", "isCorrect": true},
+          {"id": 2, "text": "Afrika", "isCorrect": false},
+          {"id": 3, "text": "Nordamerika", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wie viele Seiten hat ein Rechteck?",
+        "options": [
+          {"id": 0, "text": "Zwei", "isCorrect": false},
+          {"id": 1, "text": "Drei", "isCorrect": false},
+          {"id": 2, "text": "Vier", "isCorrect": true},
+          {"id": 3, "text": "Fünf", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welcher Planet wird als der 'Rote Planet' bezeichnet?",
+        "options": [
+          {"id": 0, "text": "Erde", "isCorrect": false},
+          {"id": 1, "text": "Mars", "isCorrect": true},
+          {"id": 2, "text": "Venus", "isCorrect": false},
+          {"id": 3, "text": "Jupiter", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer schrieb 'Romeo und Julia'?",
+        "options": [
+          {"id": 0, "text": "Charles Dickens", "isCorrect": false},
+          {"id": 1, "text": "William Shakespeare", "isCorrect": true},
+          {"id": 2, "text": "Jane Austen", "isCorrect": false},
+          {"id": 3, "text": "Mark Twain", "isCorrect": false}
+        ]
+      }
+    ],
+    "B1": [
+      {
+        "text": "Welche erneuerbare Energiequelle kommt von der Sonne?",
+        "options": [
+          {"id": 0, "text": "Wind", "isCorrect": false},
+          {"id": 1, "text": "Wasserkraft", "isCorrect": false},
+          {"id": 2, "text": "Solar", "isCorrect": true},
+          {"id": 3, "text": "Geothermie", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer ist der Autor von 'To Kill a Mockingbird'?",
+        "options": [
+          {"id": 0, "text": "Harper Lee", "isCorrect": true},
+          {"id": 1, "text": "J.K. Rowling", "isCorrect": false},
+          {"id": 2, "text": "George Orwell", "isCorrect": false},
+          {"id": 3, "text": "Ernest Hemingway", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was ist die Hauptstadt von Deutschland?",
+        "options": [
+          {"id": 0, "text": "Madrid", "isCorrect": false},
+          {"id": 1, "text": "Berlin", "isCorrect": true},
+          {"id": 2, "text": "Rom", "isCorrect": false},
+          {"id": 3, "text": "Paris", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welches Gas ist für den Treibhauseffekt verantwortlich?",
+        "options": [
+          {"id": 0, "text": "Sauerstoff", "isCorrect": false},
+          {"id": 1, "text": "Stickstoff", "isCorrect": false},
+          {"id": 2, "text": "Methan", "isCorrect": true},
+          {"id": 3, "text": "Helium", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In welchem Jahr endete der Zweite Weltkrieg?",
+        "options": [
+          {"id": 0, "text": "1943", "isCorrect": false},
+          {"id": 1, "text": "1945", "isCorrect": true},
+          {"id": 2, "text": "1948", "isCorrect": false},
+          {"id": 3, "text": "1950", "isCorrect": false}
+        ]
+      }
+    ],
+    "B2": [
+      {
+        "text": "Wer malte die Mona Lisa?",
+        "options": [
+          {"id": 0, "text": "Vincent van Gogh", "isCorrect": false},
+          {"id": 1, "text": "Leonardo da Vinci", "isCorrect": true},
+          {"id": 2, "text": "Pablo Picasso", "isCorrect": false},
+          {"id": 3, "text": "Claude Monet", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was ist der längste Fluss der Welt?",
+        "options": [
+          {"id": 0, "text": "Amazonas", "isCorrect": true},
+          {"id": 1, "text": "Nil", "isCorrect": false},
+          {"id": 2, "text": "Jangtse", "isCorrect": false},
+          {"id": 3, "text": "Mississippi", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer schrieb '1984'?",
+        "options": [
+          {"id": 0, "text": "George Orwell", "isCorrect": true},
+          {"id": 1, "text": "Aldous Huxley", "isCorrect": false},
+          {"id": 2, "text": "Ray Bradbury", "isCorrect": false},
+          {"id": 3, "text": "Ernest Hemingway", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was ist die Währung von Japan?",
+        "options": [
+          {"id": 0, "text": "Won", "isCorrect": false},
+          {"id": 1, "text": "Yuan", "isCorrect": false},
+          {"id": 2, "text": "Yen", "isCorrect": true},
+          {"id": 3, "text": "Ringgit", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Welcher Planet wird als der 'Rote Planet' bezeichnet?",
+        "options": [
+          {"id": 0, "text": "Erde", "isCorrect": false},
+          {"id": 1, "text": "Mars", "isCorrect": true},
+          {"id": 2, "text": "Venus", "isCorrect": false},
+          {"id": 3, "text": "Jupiter", "isCorrect": false}
+        ]
+      }
+    ],
+    "C1": [
+      {
+        "text": "Wer gewann den Nobelpreis für Physik im Jahr 1921 für seine Erklärung des photoelektrischen Effekts?",
+        "options": [
+          {"id": 0, "text": "Albert Einstein", "isCorrect": true},
+          {"id": 1, "text": "Niels Bohr", "isCorrect": false},
+          {"id": 2, "text": "Werner Heisenberg", "isCorrect": false},
+          {"id": 3, "text": "Marie Curie", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In welchem Jahr fiel die Berliner Mauer und führte zur Wiedervereinigung Deutschlands?",
+        "options": [
+          {"id": 0, "text": "1989", "isCorrect": true},
+          {"id": 1, "text": "1991", "isCorrect": false},
+          {"id": 2, "text": "1985", "isCorrect": false},
+          {"id": 3, "text": "1993", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer schrieb das Theaterstück 'Warten auf Godot'?",
+        "options": [
+          {"id": 0, "text": "Samuel Beckett", "isCorrect": true},
+          {"id": 1, "text": "Anton Tschechow", "isCorrect": false},
+          {"id": 2, "text": "William Shakespeare", "isCorrect": false},
+          {"id": 3, "text": "Henrik Ibsen", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was ist die Hauptstadt von Australien?",
+        "options": [
+          {"id": 0, "text": "Sydney", "isCorrect": false},
+          {"id": 1, "text": "Melbourne", "isCorrect": false},
+          {"id": 2, "text": "Canberra", "isCorrect": true},
+          {"id": 3, "text": "Brisbane", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer war die erste Frau, die einen Nobelpreis gewann?",
+        "options": [
+          {"id": 0, "text": "Marie Curie", "isCorrect": true},
+          {"id": 1, "text": "Rosalind Franklin", "isCorrect": false},
+          {"id": 2, "text": "Dorothy Crowfoot Hodgkin", "isCorrect": false},
+          {"id": 3, "text": "Barbara McClintock", "isCorrect": false}
+        ]
+      }
+    ],
+    "C2": [
+      {
+        "text": "Was ist die Hauptstadt von Bhutan?",
+        "options": [
+          {"id": 0, "text": "Thimphu", "isCorrect": true},
+          {"id": 1, "text": "Kathmandu", "isCorrect": false},
+          {"id": 2, "text": "Dhaka", "isCorrect": false},
+          {"id": 3, "text": "Colombo", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer schrieb den Roman 'Hundert Jahre Einsamkeit'?",
+        "options": [
+          {"id": 0, "text": "Gabriel Garcia Marquez", "isCorrect": true},
+          {"id": 1, "text": "Isabel Allende", "isCorrect": false},
+          {"id": 2, "text": "Jorge Luis Borges", "isCorrect": false},
+          {"id": 3, "text": "Pablo Neruda", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In welchem Jahr begann die Französische Revolution?",
+        "options": [
+          {"id": 0, "text": "1776", "isCorrect": false},
+          {"id": 1, "text": "1789", "isCorrect": true},
+          {"id": 2, "text": "1798", "isCorrect": false},
+          {"id": 3, "text": "1804", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Was ist die größte Wüste der Welt?",
+        "options": [
+          {"id": 0, "text": "Sahara-Wüste", "isCorrect": true},
+          {"id": 1, "text": "Gobi-Wüste", "isCorrect": false},
+          {"id": 2, "text": "Arabische Wüste", "isCorrect": false},
+          {"id": 3, "text": "Antarktis", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Wer malte die Mona Lisa?",
+        "options": [
+          {"id": 0, "text": "Leonardo da Vinci", "isCorrect": true},
+          {"id": 1, "text": "Vincent van Gogh", "isCorrect": false},
+          {"id": 2, "text": "Pablo Picasso", "isCorrect": false},
+          {"id": 3, "text": "Claude Monet", "isCorrect": false}
+        ]
+      }
+    ]
+  }
+  

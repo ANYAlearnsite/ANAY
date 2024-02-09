@@ -1,0 +1,285 @@
+{
+    "A1": [
+      {
+        "text": "What is the color of the sky?",
+        "options": [
+          {"id": 0, "text": "Blue", "isCorrect": true},
+          {"id": 1, "text": "Red", "isCorrect": false},
+          {"id": 2, "text": "Green", "isCorrect": false},
+          {"id": 3, "text": "Yellow", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "How many fingers does a person have?",
+        "options": [
+          {"id": 0, "text": "Two", "isCorrect": false},
+          {"id": 1, "text": "Five", "isCorrect": true},
+          {"id": 2, "text": "Ten", "isCorrect": false},
+          {"id": 3, "text": "Eight", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which animal lives in water?",
+        "options": [
+          {"id": 0, "text": "Elephant", "isCorrect": false},
+          {"id": 1, "text": "Fish", "isCorrect": true},
+          {"id": 2, "text": "Lion", "isCorrect": false},
+          {"id": 3, "text": "Monkey", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What do you use to write?",
+        "options": [
+          {"id": 0, "text": "Brush", "isCorrect": false},
+          {"id": 1, "text": "Paper", "isCorrect": true},
+          {"id": 2, "text": "Stone", "isCorrect": false},
+          {"id": 3, "text": "Air", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which month is in the middle of the year?",
+        "options": [
+          {"id": 0, "text": "January", "isCorrect": false},
+          {"id": 1, "text": "June", "isCorrect": true},
+          {"id": 2, "text": "October", "isCorrect": false},
+          {"id": 3, "text": "December", "isCorrect": false}
+        ]
+      }
+    ],
+    "A2": [
+      {
+        "text": "What is the opposite of 'happy'?",
+        "options": [
+          {"id": 0, "text": "Sad", "isCorrect": true},
+          {"id": 1, "text": "Angry", "isCorrect": false},
+          {"id": 2, "text": "Excited", "isCorrect": false},
+          {"id": 3, "text": "Funny", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which continent is known as the 'Land of the Rising Sun'?",
+        "options": [
+          {"id": 0, "text": "Europe", "isCorrect": false},
+          {"id": 1, "text": "Asia", "isCorrect": true},
+          {"id": 2, "text": "Africa", "isCorrect": false},
+          {"id": 3, "text": "North America", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "How many sides does a rectangle have?",
+        "options": [
+          {"id": 0, "text": "Two", "isCorrect": false},
+          {"id": 1, "text": "Three", "isCorrect": false},
+          {"id": 2, "text": "Four", "isCorrect": true},
+          {"id": 3, "text": "Five", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which planet is known as the 'Red Planet'?",
+        "options": [
+          {"id": 0, "text": "Earth", "isCorrect": false},
+          {"id": 1, "text": "Mars", "isCorrect": true},
+          {"id": 2, "text": "Venus", "isCorrect": false},
+          {"id": 3, "text": "Jupiter", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who wrote 'Romeo and Juliet'?",
+        "options": [
+          {"id": 0, "text": "Charles Dickens", "isCorrect": false},
+          {"id": 1, "text": "William Shakespeare", "isCorrect": true},
+          {"id": 2, "text": "Jane Austen", "isCorrect": false},
+          {"id": 3, "text": "Mark Twain", "isCorrect": false}
+        ]
+      }
+    ],
+    "B1": [
+      {
+        "text": "Which renewable energy source comes from the sun?",
+        "options": [
+          {"id": 0, "text": "Wind", "isCorrect": false},
+          {"id": 1, "text": "Hydropower", "isCorrect": false},
+          {"id": 2, "text": "Solar", "isCorrect": true},
+          {"id": 3, "text": "Geothermal", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who is the author of 'To Kill a Mockingbird'?",
+        "options": [
+          {"id": 0, "text": "Harper Lee", "isCorrect": true},
+          {"id": 1, "text": "J.K. Rowling", "isCorrect": false},
+          {"id": 2, "text": "George Orwell", "isCorrect": false},
+          {"id": 3, "text": "Ernest Hemingway", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What is the capital city of Germany?",
+        "options": [
+          {"id": 0, "text": "Madrid", "isCorrect": false},
+          {"id": 1, "text": "Berlin", "isCorrect": true},
+          {"id": 2, "text": "Rome", "isCorrect": false},
+          {"id": 3, "text": "Paris", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which gas is responsible for the greenhouse effect?",
+        "options": [
+          {"id": 0, "text": "Oxygen", "isCorrect": false},
+          {"id": 1, "text": "Nitrogen", "isCorrect": false},
+          {"id": 2, "text": "Methane", "isCorrect": true},
+          {"id": 3, "text": "Helium", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In which year did World War II end?",
+        "options": [
+          {"id": 0, "text": "1943", "isCorrect": false},
+          {"id": 1, "text": "1945", "isCorrect": true},
+          {"id": 2, "text": "1948", "isCorrect": false},
+          {"id": 3, "text": "1950", "isCorrect": false}
+        ]
+      }
+    ],
+    "B2": [
+      {
+        "text": "Who painted the Mona Lisa?",
+        "options": [
+          {"id": 0, "text": "Vincent van Gogh", "isCorrect": false},
+          {"id": 1, "text": "Leonardo da Vinci", "isCorrect": true},
+          {"id": 2, "text": "Pablo Picasso", "isCorrect": false},
+          {"id": 3, "text": "Claude Monet", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What is the longest river in the world?",
+        "options": [
+          {"id": 0, "text": "Amazon River", "isCorrect": true},
+          {"id": 1, "text": "Nile River", "isCorrect": false},
+          {"id": 2, "text": "Yangtze River", "isCorrect": false},
+          {"id": 3, "text": "Mississippi River", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who wrote '1984'?",
+        "options": [
+          {"id": 0, "text": "George Orwell", "isCorrect": true},
+          {"id": 1, "text": "Aldous Huxley", "isCorrect": false},
+          {"id": 2, "text": "Ray Bradbury", "isCorrect": false},
+          {"id": 3, "text": "Ernest Hemingway", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What is the currency of Japan?",
+        "options": [
+          {"id": 0, "text": "Won", "isCorrect": false},
+          {"id": 1, "text": "Yuan", "isCorrect": false},
+          {"id": 2, "text": "Yen", "isCorrect": true},
+          {"id": 3, "text": "Ringgit", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Which planet is known as the 'Red Planet'?",
+        "options": [
+          {"id": 0, "text": "Earth", "isCorrect": false},
+          {"id": 1, "text": "Mars", "isCorrect": true},
+          {"id": 2, "text": "Venus", "isCorrect": false},
+          {"id": 3, "text": "Jupiter", "isCorrect": false}
+        ]
+      }
+    ],
+    "C1": [
+      {
+        "text": "Who won the Nobel Prize in Physics in 1921 for his explanation of the photoelectric effect?",
+        "options": [
+          {"id": 0, "text": "Albert Einstein", "isCorrect": true},
+          {"id": 1, "text": "Niels Bohr", "isCorrect": false},
+          {"id": 2, "text": "Werner Heisenberg", "isCorrect": false},
+          {"id": 3, "text": "Marie Curie", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In which year did the Berlin Wall fall, leading to the reunification of Germany?",
+        "options": [
+          {"id": 0, "text": "1989", "isCorrect": true},
+          {"id": 1, "text": "1991", "isCorrect": false},
+          {"id": 2, "text": "1985", "isCorrect": false},
+          {"id": 3, "text": "1993", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who wrote the play 'Waiting for Godot'?",
+        "options": [
+          {"id": 0, "text": "Samuel Beckett", "isCorrect": true},
+          {"id": 1, "text": "Anton Chekhov", "isCorrect": false},
+          {"id": 2, "text": "William Shakespeare", "isCorrect": false},
+          {"id": 3, "text": "Henrik Ibsen", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What is the capital city of Australia?",
+        "options": [
+          {"id": 0, "text": "Sydney", "isCorrect": false},
+          {"id": 1, "text": "Melbourne", "isCorrect": false},
+          {"id": 2, "text": "Canberra", "isCorrect": true},
+          {"id": 3, "text": "Brisbane", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who was the first woman to win a Nobel Prize?",
+        "options": [
+          {"id": 0, "text": "Marie Curie", "isCorrect": true},
+          {"id": 1, "text": "Rosalind Franklin", "isCorrect": false},
+          {"id": 2, "text": "Dorothy Crowfoot Hodgkin", "isCorrect": false},
+          {"id": 3, "text": "Barbara McClintock", "isCorrect": false}
+        ]
+      }
+    ],
+    "C2": [
+      {
+        "text": "What is the capital city of Bhutan?",
+        "options": [
+          {"id": 0, "text": "Thimphu", "isCorrect": true},
+          {"id": 1, "text": "Kathmandu", "isCorrect": false},
+          {"id": 2, "text": "Dhaka", "isCorrect": false},
+          {"id": 3, "text": "Colombo", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who wrote the novel 'One Hundred Years of Solitude'?",
+        "options": [
+          {"id": 0, "text": "Gabriel Garcia Marquez", "isCorrect": true},
+          {"id": 1, "text": "Isabel Allende", "isCorrect": false},
+          {"id": 2, "text": "Jorge Luis Borges", "isCorrect": false},
+          {"id": 3, "text": "Pablo Neruda", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "In which year did the French Revolution begin?",
+        "options": [
+          {"id": 0, "text": "1776", "isCorrect": false},
+          {"id": 1, "text": "1789", "isCorrect": true},
+          {"id": 2, "text": "1798", "isCorrect": false},
+          {"id": 3, "text": "1804", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "What is the largest desert in the world?",
+        "options": [
+          {"id": 0, "text": "Sahara Desert", "isCorrect": true},
+          {"id": 1, "text": "Gobi Desert", "isCorrect": false},
+          {"id": 2, "text": "Arabian Desert", "isCorrect": false},
+          {"id": 3, "text": "Antarctica", "isCorrect": false}
+        ]
+      },
+      {
+        "text": "Who painted the Mona Lisa?",
+        "options": [
+          {"id": 0, "text": "Leonardo da Vinci", "isCorrect": true},
+          {"id": 1, "text": "Vincent van Gogh", "isCorrect": false},
+          {"id": 2, "text": "Pablo Picasso", "isCorrect": false},
+          {"id": 3, "text": "Claude Monet", "isCorrect": false}
+        ]
+      }
+    ]
+  }
+  
