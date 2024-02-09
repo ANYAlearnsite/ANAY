@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import NavBaruser from "./NavBaruser";
 import { jwtDecode } from "jwt-decode";
+import Fotter from "./Fotter";
 
 const token = localStorage.getItem("token");
 const Admin = () => {
@@ -30,6 +31,7 @@ const Admin = () => {
   return (
     <div>
       <NavBaruser />
+      
     </div>
   );
 };
