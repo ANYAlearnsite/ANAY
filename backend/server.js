@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require ('cors')
 const Routermain = require('./router/router.js')
 const Routeradmin= require('./router/routeradmin.js')
-
+const RouterUsers=require('./router/routerUser.js')
 
 const PORT = 3600
 const app = express()
@@ -15,7 +15,7 @@ app.use(cors())
 
 app.use("/",Routermain)
 app.use("/admin",Routeradmin)
-
+app.use('/',RouterUsers)
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`)

@@ -18,7 +18,10 @@ import Searchuser from './components/searchuser.jsx';
 import Update from './components/Updateuser.jsx'
 import { useState } from 'react';
 import Lesson from './components/Lesson.jsx'; 
-
+import AllLessons from './components/AllLessons.jsx';
+import FavoritList from './components/FavoritList.jsx';
+import SearchLesson from './components/SearchLesson.jsx';
+import UpDateU from './components/UpDateU.jsx';
 function App() {
   const [publicId, setPublicId] = useState('')
   return (
@@ -47,6 +50,10 @@ function App() {
       <Route path='/addlesson' element={<Addlesson/>}/>
       <Route path='/updatelesson/:id' element={<Updatelesson/>}/>
       <Route path='/searchforuser/:name' element={<Searchuser/>}/>
+      <Route path="/allLessons" element={<AllLessons/>}/>
+      <Route path="/favoritList" element={<FavoritList/>}/>
+      <Route path="/upDateU" element={<UpDateU/>}/>
+      <Route path="/SearchLesson" element={<SearchLesson/>}/>
       </Routes>
       
       </Router>
