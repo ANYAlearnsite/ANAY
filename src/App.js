@@ -8,10 +8,6 @@ import Submit from './components/Submituser.jsx'
 import Test from './components/testpages/Test.jsx';
 import Testlvl from './components/testpages/Testlvl.jsx';
 import Quiz from './components/testpages/Quiz.jsx';
-
-
-import Admin from './components/Admin.jsx'; 
-
 import Users from "./components/Userslist.jsx";
 import LessonsList from './components/lessonsList.jsx';
 import UpdateRole from "./components/update.jsx";
@@ -32,7 +28,7 @@ import UpDateU from './components/UpDateU.jsx';
 
 
 function App() {
-  const [publicId, setPublicId] = useState('')
+  const [publicId, setPublicId] = useState("")
   return (
     <div className="App">
       <Router>
@@ -42,7 +38,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User publicId={publicId}/>}/>
-      <Route path="/Update" element={<Update setPublicId={setPublicId}/>}/>
+      <Route path="/Update" element={<Update setPublicId={setPublicId} publicId={publicId}/>}/>
       <Route path="/lesson" element={<Lesson/>}/>
       <Route path="/lessonfUser" element={<LessonsfUser/>}/>
 

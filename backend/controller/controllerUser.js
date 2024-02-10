@@ -1,3 +1,4 @@
+
 const {
   getall,
   getOne,
@@ -5,6 +6,7 @@ const {
   favorite,
   addfavorit,
   deletefavorit,
+  updateImage
 } = require("../database/users");
 const bycribt = require("bcrypt");
 
@@ -73,4 +75,14 @@ module.exports = {
       console.log(err);
     }
   },
+UpdateImage : async (req,res)=>{
+  const id= req.body.id;
+  const image =req.body.image;
+  try{
+    const result = await updateImage([image,id])
+    res.status(200).send("updated")
+  }catch(err){throw(err)}
+
+}
+  
 };

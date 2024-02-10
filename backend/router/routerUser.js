@@ -15,6 +15,8 @@ RouterUsers.get('/get/fav/:id',authenticateToken,controlleruser.favoritList)
 //done
 
 RouterUsers.delete('/delete',authenticateToken,controlleruser.deletefavless)
+//Ahmed cloudinary 
+RouterUsers.put("/updateImage",authenticateToken,controlleruser.UpdateImage)  
 
 
 
