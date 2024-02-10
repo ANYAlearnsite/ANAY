@@ -22,6 +22,7 @@ import AllLessons from './components/AllLessons.jsx';
 import FavoritList from './components/FavoritList.jsx';
 import SearchLesson from './components/SearchLesson.jsx';
 import UpDateU from './components/UpDateU.jsx';
+import ScoreLevel from './components/testpages/ScoreLevel.jsx';
 function App() {
   const [publicId, setPublicId] = useState('')
   return (
@@ -43,7 +44,8 @@ function App() {
       <Route path='/test' element={<Test/>}/>
       <Route path= "/test/:lan" element={<Testlvl/>}/>
       <Route  path='/test/:languge/:level' element={<Quiz/>}/>
-      
+      <Route path="/test/scoreLevel" element={<ScoreLevel/>}/>
+
       <Route path='/userslist' element={<Users/>}/>
       <Route path='/lessonslist' element={<LessonsList/>}/>
       <Route path='/update/:id' element={<UpdateRole/>}/>
@@ -54,6 +56,7 @@ function App() {
       <Route path="/favoritList" element={<FavoritList/>}/>
       <Route path="/upDateU" element={<UpDateU/>}/>
       <Route path="/SearchLesson" element={<SearchLesson/>}/>
+     
       </Routes>
       
       </Router>

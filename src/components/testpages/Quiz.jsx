@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import NavBaruser from "../NavBaruser";
 import Fotter from "../Fotter";
+import ScoreLevel from "./ScoreLevel.jsx";
 
 const Quiz = () => {
   const [data, setData] = useState([]);
@@ -57,6 +58,7 @@ const Quiz = () => {
           <p className="text-lg">
             Test your knowledge and have fun with our interactive quiz.
           </p>
+          <ScoreLevel score={score} level={level} />
         </div>
         <div className="flex items-center justify-center">
           {data[level] && currentQuestion < data[level].length && (
