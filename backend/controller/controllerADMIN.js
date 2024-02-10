@@ -1,5 +1,18 @@
 const db=require('../database/dbADMIN')
 
+
+
+const fetchalltests=async(req,res)=>{
+    try{
+        const data=await db.alltests()
+        res.json(data)
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
+
+
 const fetchallusers= async (req,res)=>{
 try{
     const data=await db.getallusers()
@@ -31,7 +44,7 @@ const fetchallvideoslessons=async(req,res)=>{
 const adduserrr=async(req,res)=>{
     try{
         const newone=req.body
-        await db.adduser(newone)
+         db.adduser(newone)
         res.status(201).send("user added successfully !")
     }
     catch{(err)=>{
@@ -42,11 +55,11 @@ const adduserrr=async(req,res)=>{
 const removeuser=async(req,res)=>{
     try{
         const id=req.params.id
-        const data=   await db.deluser(id)
-res.json(data)  
+     await db.deluser(id)
+res.send(" deleted")  
   }
     catch{(err)=>{
-        console.log(err);
+        console.log(err)
     }}
 }
 const updated=async(req,res)=>{
@@ -92,4 +105,26 @@ const getoneus=async(req,res)=>{
     }}
 }
 
-module.exports={fetchallusers,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}
+const createlesson=async(req,res)=>{
+    try{
+        let urlvid=req.body.urlvid
+        let lesson = req.body.lesson
+        await db.addlesson(lesson,urlvid)
+        res.send("added !")
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
+const searchcatego=async(req,res)=>{
+    const categ=req.params.category
+    try{
+        const data=await db.searchbycategory(categ)
+        res.json(data)
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
+
+module.exports={fetchallusers,searchcatego,createlesson,fetchalltests,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}

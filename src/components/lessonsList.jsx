@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import NavBaruser from "./NavBaruser";
 const LessonsList = () => {
   const [datalessons, setdatalessons] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [category, setcategory] = useState("");
 const [refresh,setrefresh]=useState(false)
   useEffect(() => {
-    axios.get('http://localhost:3600/admin/alllessons')
+    axios.get('http://localhost:3600/admin/allvideoslessons')
       .then((results) => {
         console.log("Lessons fetched");
         setdatalessons(results.data[0]);
@@ -19,10 +19,10 @@ const [refresh,setrefresh]=useState(false)
 
 
   const haendlDeleteLesson = (id) => {
-    axios.delete(`http://localhost:3600/admin/alllessons/${id}`)
+    axios.delete(`http://localhost:3600/admin/delete/${id}`)
       .then(() => {
         console.log("Lesson deleted");
-        axios.get('http://localhost:3600/admin/alllessons')
+        axios.get('http://localhost:3600/admin/allvideoslessons')
           .then((results) => {
             setdatalessons(results.data[0]);
           })
@@ -34,14 +34,14 @@ const [refresh,setrefresh]=useState(false)
         console.log(err);
       });
   };
-console.log(datalessons);
+
   return (
     <div>
       <NavBaruser/>
       <div className="flex h-screen">
       <div className="bg-blue-100 w-64 py-4 px-6">
         <ul className="sidebar-nav">
-        <Link to="/"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>          <li>
+        <Link to="/admin"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>          <li>
             <Link to="/userslist" className="text-gray-800 hover:text-blue-500">
               Users
             </Link>
@@ -60,15 +60,15 @@ console.log(datalessons);
             <input
               type="text"
               placeholder="Search by category"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              
+              onChange={(e) => setcategory(e.target.value)}
               className="border rounded-md py-2 px-4 mr-4"
             />
-            <button
+           <Link to={`/searchLessons/${category}`}> <button
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-            >
+             >
               Search
-            </button>
+            </button></Link>
           </div>
         </div>
 
@@ -76,31 +76,30 @@ console.log(datalessons);
           {datalessons.map((lesson) => (
             <div key={lesson.idlessons} className="bg-white rounded-md shadow-md p-4 relative">
               <div className="mb-4">
-                <span className="font-semibold">ID:</span> {lesson.idlessons}
+                <span className="font-semibold">ID:</span> {lesson.idlessons_link}
               </div>
               <div className="mb-4">
                 <span className="font-semibold">Category:</span> {lesson.category}
               </div>
               <div className="mb-4">
-                <span className="font-semibold">User ID:</span> {lesson.user_iduser}
               </div>
               
-              <video src={lesson.urlvid} controls width="300" height="200"></video>
-
+              <video width="300" height="200" controls className="w-full rounded-t-lg">
+            <source src={lesson.urlvid} type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
               <div className="flex justify-end mt-4">
                 <button
                  
                   className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded mr-2"
                 onClick={()=>{
-                    axios.delete(`http://localhost:3600/delete/${lesson.idlessons}`).then(()=>{
-                        console.log("lesson deleted");
-                        setrefresh(!refresh)
-                    })
+                   haendlDeleteLesson(lesson.idlessons)
                 }}
                 >
                   Delete
                 </button>
-                <Link to={`/updatelesson/${lesson.idlessons}`}>
+                <Link to={`/updatelesson/${lesson.idlessons_link}`}>
                   <button
                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                   >
