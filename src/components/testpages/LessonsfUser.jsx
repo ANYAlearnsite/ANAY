@@ -1,34 +1,34 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import englishf from "../../images/flags/ef.jpg";
 import frenshf from "../../images/flags/ff.jpg";
 import germanyf from "../../images/flags/gerf.webp";
 import russianf from "../../images/flags/rf.jpg";
-import NavBaruser from "../NavBaruser";
 import Fotter from "../Fotter";
 import { Link } from "react-router-dom";
-const Test = () => {
+
+const LessonsfUser = () => {
   const lan = {
     fr: "frensh",
     all: "allmend",
     ru: "russia",
     en: "english",
   };
+
+  const navigate = useNavigate();
+
+  const handleGoToLesson = () => {
+    navigate("/lesson");
+  };
+
   return (
     <>
-      <NavBaruser />
-      <div className=" bg-gradient-to-r bg-cyan-400">
-        <div>
-        <div>
-       
-      </div>
-          <div className="flex justify-center items-center h-screen ">
-          <div className="text-white text-center">
-          <h1 className="text-4xl font-bold mt">Welcome to Our lecture Zone!</h1>
-          <p className="text-lg">
-           improuve your knowledge and have fun with our lecture.
-          </p>
+      <div className="bg-gradient-to-r from-cyan-400 to-sky-800 min-h-screen flex items-center justify-center">
+        <div className="text-white text-center">
+          <h1 className="text-4xl font-bold mb-4">Welcome to Our Lessons Zone!</h1>
+          <p className="text-lg mb-8">Improve your knowledge and have fun with our lessons.</p>
         </div>
-            <div className="text-center w-64 m-4 rounded overflow-hidden shadow-lg">
+        <div className="text-center w-64 m-4 rounded overflow-hidden shadow-lg">
               <img
                 className="w-full"
                 src={englishf}
@@ -36,9 +36,9 @@ const Test = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">English Land</div>
-                <Link to={`/test/${lan.en}`}> 
+                <Link to={`/lesson/${lan.en}`}> 
                   <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    Go to test
+                    Go to lesson 
                   </button>
                 </Link>
               </div>
@@ -52,14 +52,13 @@ const Test = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Frensh Land</div>
-               <Link to={`/test/${lan.fr}`}>
+               <Link to={`/lesoon/${lan.fr}`}>
                <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                  Go to test
+                  Go to lesson 
                 </button>
                </Link>
               </div>
             </div>
-
             <div className="text-center w-64 m-4 rounded overflow-hidden shadow-lg">
               <img
                 className="w-full"
@@ -68,9 +67,9 @@ const Test = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Germanny Land</div>
-               <Link to={`/test/${lan.all}`}>
+               <Link to={`/lesson/${lan.all}`}>
                <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                  Go to test
+                  Go to lesson
                 </button>
                </Link>
               </div>
@@ -86,13 +85,12 @@ const Test = () => {
                 <div className="font-bold text-xl mb-2">Russain Land</div>
                <Link to={`/test/${lan.ru}`}>
                <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                  Go to test
+                  Go to lesson
                 </button>
                </Link>
               </div>
             </div>
-          </div>
-        </div>
+        
       </div>
 
       <Fotter />
@@ -100,4 +98,24 @@ const Test = () => {
   );
 };
 
-export default Test;
+// Helper function to get image path based on language
+const getImagePath = (language) => {
+  switch (language) {
+    case "frensh":
+      return frenshf;
+    case "allmend":
+      return germanyf;
+    case "russia":
+      return russianf;
+    case "english":
+    default:
+      return englishf;
+  }
+};
+
+// Helper function to capitalize the first letter of a string
+const capitalizeFirstLetter = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+export default LessonsfUser;

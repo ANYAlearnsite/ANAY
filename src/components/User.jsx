@@ -15,7 +15,7 @@ const User = ({ publicId }) => {
             <a href="#" className="text-white hover:text-gray-300">
               Favorit
             </a>
-            <a onClick={() => { navigate('/lessonuser'); }} href="#" className="text-white hover:text-gray-300">
+            <a onClick={() => { navigate('/lessonfUser'); }} href="#" className="text-white hover:text-gray-300">
   Lessons
 </a>
 
