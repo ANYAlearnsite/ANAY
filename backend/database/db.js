@@ -3,7 +3,9 @@ var mysql = require('mysql2');
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "nour123",
+
+  password: "21018965",
+
   database: "learn"
 }).promise();
 
@@ -27,7 +29,12 @@ const getall = ()=>{
 module.exports = {
     singup : singup,
     getuser : getuser,
-    getall :getall}
+    getall :getall,
+     con : con
+}
     
-    module.exports=con
+ 
+    
+    
+
 
