@@ -8,11 +8,7 @@ import Submit from './components/Submituser.jsx'
 import Test from './components/testpages/Test.jsx';
 import Testlvl from './components/testpages/Testlvl.jsx';
 import Quiz from './components/testpages/Quiz.jsx';
-
-
 import Admin from './components/Admin.jsx';
-
-
 import Users from "./components/Userslist.jsx";
 import LessonsList from './components/lessonsList.jsx';
 import UpdateRole from "./components/update.jsx";
@@ -36,6 +32,7 @@ function App() {
   
      
       <Routes>
+          {/* lending page then the login page  */}
         <Route path='/' element={<IntroPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
@@ -45,7 +42,7 @@ function App() {
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>
       <Route path= "/test/:lan" element={<Testlvl/>}/>
-      <Route  path='/test/:languge/:level' element={<Quiz/>}/>
+      <Route path='/test/:languge/:level' element={<Quiz/>}/>
       <Route path='/userslist' element={<Users/>}/>
       <Route path='/lessonslist' element={<LessonsList/>}/>
       <Route path='/update/:id' element={<UpdateRole/>}/>
