@@ -1,8 +1,8 @@
-const con = require('./db')
+const {con} = require('./db')
 
 const getall = () => {
-    const sql = 'SELECT l.idlessons,l.category,ll.urlvid FROM `lessons` l JOIN lessons_link ll ON l.idlessons = ll.lessons_idlessons'
-   return con.query(sql )
+  const sql = 'SELECT l.idlessons,l.category,ll.urlvid FROM `lessons` l JOIN lessons_link ll ON l.idlessons = ll.lessons_idlessons'
+  return con.query(sql)
 }
 
 const getOne = (idlessons) => {
@@ -11,7 +11,7 @@ const getOne = (idlessons) => {
 }
 
 
-const updateU = (newname, newpwd, iduser) => {
+const updateU = ([newname, newpwd, iduser]) => {
   const sql = `UPDATE user SET name=?, pwd=? WHERE iduser=?`
   return con.query(sql,[newname, newpwd, iduser]);
 }
@@ -28,9 +28,9 @@ const addfavorit = (iduser, idlessons) => {
 };
 
 
-const deletefavorit = (iduser,idlessons) => {
-  const sql = 'DELETE FROM favorit WHERE user_iduser = ? AND lessons_idlessons=?'
-return  con.query(sql,[iduser,idlessons])
+const deletefavorit = ([iduser,idlessons]) => {
+  const sql = 'DELETE FROM favorit WHERE user_iduser = ? AND lessons_idlessons = ?'
+  return  con.query(sql,[iduser,idlessons])
 }
 
 

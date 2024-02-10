@@ -24,7 +24,7 @@ const Lesson = () => {
             Button
           </button>
         </div>
-      </div>
+      </div>  
     </div>
   );
 };

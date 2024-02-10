@@ -3,9 +3,13 @@ import axios from 'axios'
 
 const SearchLesson = (props) => {
   const [lessonId, setLessonId] = useState("")
-
+  const tokn = localStorage.getItem("token")
   const search = (idlessons) => {
-    axios.get(`http://localhost:3600/get/${idlessons}`)
+    axios.get(`http://localhost:3600/user/get/${idlessons}`,{
+      headers :{
+        Autho : tokn
+      }
+    })
       .then((res) => { 
         props.sear(res.data)
         console.log(res.data) })

@@ -2,9 +2,36 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import { Link } from 'react-router-dom';
+import {useState,useEffect} from 'react'
+import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 const User = ({ publicId }) => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+    const [userInfo, setUserInfo] = useState("");
+    const [data, setData] = useState("");
+
+    useEffect(() => {
+      axios
+        .get(`http://localhost:3600/getusers`, {
+          headers: {
+            Autho: token,
+          },
+        })
+        .then((data) => {
+          // console.log("data for the user ", data.data);
+          setData(data.data);
+        })
+        .then(() => {
+          setUserInfo(jwtDecode(token).user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, []);
+    console.log("you loged info ", userInfo);
+    console.log(data);
 
   return (
     <div>
@@ -15,7 +42,7 @@ const User = ({ publicId }) => {
             <a href="#" className="text-white hover:text-gray-300">
               Favorit
             </a>
-            <a onClick={() => { navigate('/lessonuser'); }} href="#" className="text-white hover:text-gray-300">
+            <a onClick={() => { navigate('/lessonfUser'); }} href="#" className="text-white hover:text-gray-300">
   Lessons
 </a>
 
