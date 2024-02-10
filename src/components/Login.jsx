@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router';
 import Fotter from './Fotter.jsx';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar.jsx';
+import { jwtDecode } from 'jwt-decode';
 
-
-
+  
 const Login = () => {
   const [email, setEmail] = useState('')
   const [pwd, setPwd] = useState('')
@@ -17,18 +17,29 @@ const Login = () => {
 
   const loging = async () => {
     try {
-      console.log(obj);
+      console.log('obj',obj);
       const response = await axios.post(`http://localhost:3600/getuser`, obj)
       if (response.status === 200) {
-        console.log(response.data);
         localStorage.setItem('token', response.data.jwt_user)
-        navigate('/admin')
+        redirect(localStorage.getItem("token"))
       }
     }
     catch (err) {
       console.log(err);
     }
   }
+
+  // this is for verify the redirect from the jwt 
+  const redirect =(tokn)=>{
+    const dectok = jwtDecode(tokn)
+    if (dectok.user[0].role === 'admin') {
+      navigate('/admin')
+    }
+    else{
+      navigate('/user')
+    }
+  }
+
   return (
     <div>
       <NavBar/>

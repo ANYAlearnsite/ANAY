@@ -1,4 +1,4 @@
-const con=require('./db.js')
+const con = require("./db");
 
 const getallusers=()=>{
 const sql='select * from user'
@@ -41,74 +41,18 @@ return con.query(sql,[newrole,id])
 
 // }
 
-    const updatelesson = (urlv, id) => {
-        const sql = 'UPDATE learn.lessons_link SET urlvid=? WHERE idlessons_link=?';
-        return con.query(sql, [urlv,id]);
-    }
+const updatelesson = (urlv, id) => {
+  const sql = "UPDATE learn.lessons_link SET urlvid=? WHERE idlessons_link=?";
+  return con.query(sql, [urlv, id]);
+};
 
-    const deletelesson = (lessonId) => {
-        const sql = `
-            DELETE FROM learn.lessons_link WHERE lessons_idlessons = ?;
-            DELETE FROM learn.test WHERE lessons_idlessons = ?;
-            DELETE FROM learn.lessons WHERE idlessons = ?;
-        `;
-        return new Promise((resolve, reject) => {
-            con.query(sql, [lessonId, lessonId, lessonId], (err, result) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(result);
-                }
-            });
-        });
-    };
+const deletelesson=(id)=>{
+const sql="DELETE FROM learn.lessons_link WHERE idlessons_link = ?"
+return con.query(sql,id)
+}
+
 const getoneuser=(username)=>{
 const sql='select * from user where name=?'
 return con.query(sql,username)
 }   
-
-
-const addlesson = (lesson, link) => {
-    return new Promise((resolve, reject) => {
-        con.beginTransaction(err => {
-            if (err) {
-                reject(err);
-                return;
-            }
-
-            con.query('INSERT INTO lessons SET ?', lesson, (err, result) => {
-                if (err) {
-                    con.rollback(() => {
-                        reject(err);
-                    });
-                    return;
-                }
-
-                const lessonId = result.insertId;
-
-                link.lessons_idlessons = lessonId; // Set the lessons_idlessons field to the inserted lesson ID
-
-                con.query('INSERT INTO lessons_link SET ?', link, (err, result) => {
-                    if (err) {
-                        con.rollback(() => {
-                            reject(err);
-                        });
-                        return;
-                    }
-
-                    con.commit(err => {
-                        if (err) {
-                            con.rollback(() => {
-                                reject(err);
-                            });
-                            return;
-                        }
-
-                        resolve(result);
-                    });
-                });
-            });
-        });
-    });
-};
-module.exports={getallusers,searchbycategory,addlesson,getalllessons,alltests,getvideoslessons,adduser,deluser,updrole,updatelesson,deletelesson,getoneuser}
+module.exports={getallusers,getalllessons,getvideoslessons,adduser,deluser,updrole,updatelesson,deletelesson,getoneuser}

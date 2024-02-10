@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
 import Admin from './components/Admin.jsx';
 import User from './components/User.jsx';
-import NavBar from './components/NavBar.jsx'
 import IntroPage from './components/IntroPage.jsx';
 import Submit from './components/Submituser.jsx'
 import Test from './components/testpages/Test.jsx';
@@ -18,6 +17,7 @@ import Searchuser from './components/searchuser.jsx';
 import Stat from './components/stat.jsx';
 import SearchLessons from './components/searchlessons.jsx';
 function App() {
+  const [publicId, setPublicId] = useState('')
   return (
     <div className="App">
     
@@ -25,10 +25,13 @@ function App() {
   
      
       <Routes>
+          {/* lending page then the login page  */}
         <Route path='/' element={<IntroPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
-      <Route path="/user" element={<User/>}/>
+      <Route path="/user" element={<User publicId={publicId}/>}/>
+      <Route path="/Update" element={<Update setPublicId={setPublicId}/>}/>
+      <Route path="/lesson" element={<Lesson/>}/>
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>
       <Route path= "/test/:lan" element={<Testlvl/>}/>
