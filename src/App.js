@@ -26,11 +26,10 @@ function App() {
     <div className="App">
       <Router>
       <Routes>
+          {/* lending page then the login page  */}
         <Route path='/' element={<IntroPage/>}/>
       <Route path="/login" element={<Login/>}/>
-      
       <Route path="/admin" element={<Admin/>}/>
-      
       <Route path="/user" element={<User publicId={publicId}/>}/>
       <Route path="/Update" element={<Update setPublicId={setPublicId}/>}/>
       <Route path="/lesson" element={<Lesson/>}/>
@@ -48,6 +47,11 @@ function App() {
       <Route path='/addlesson' element={<Addlesson/>}/> 
       <Route path='/updatelesson/:id' element={<Updatelesson/>}/> 
       <Route path='/searchforuser/:name' element={<Searchuser/>}/>
+      <Route path="/allLessons" element={<AllLessons/>}/>
+      <Route path="/favoritList" element={<FavoritList/>}/>
+      <Route path="/upDateU" element={<UpDateU/>}/>
+      <Route path="/SearchLesson" element={<SearchLesson/>}/>
+
       </Routes>
       
       </Router>
