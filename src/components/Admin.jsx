@@ -3,8 +3,6 @@ import React,{useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import NavBaruser from './NavBaruser.jsx';
-
-
 import { jwtDecode } from "jwt-decode";
 import Fotter from "./Fotter";
    
@@ -65,3 +63,4 @@ import Fotter from "./Fotter";
   };
 
 export default Admin;
+
