@@ -1,6 +1,6 @@
 var mysql = require('mysql2');
 
-var con = mysql.createConnection({
+const con = mysql.createConnection({
   host: "localhost",
   user: "root",
 
@@ -14,7 +14,7 @@ const singup =([X,Y,Z,W])=>{
     con.query(sql,[X,Y,Z,W])
 }
 
-
+// get user login info 
 const getuser =(x)=>{
     const sql = `SELECT * FROM user WHERE email = ?`
     return con.query(sql,x)
@@ -30,7 +30,7 @@ module.exports = {
     singup : singup,
     getuser : getuser,
     getall :getall,
-     con : con
+    con : con
 }
     
  

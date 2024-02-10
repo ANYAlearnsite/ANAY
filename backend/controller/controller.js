@@ -24,7 +24,7 @@ module.exports = {
         try {
            
             const result = await db.getuser(req.body.email);
-          
+            console.log('result',result);
             console.log('2',req.body.pwd);
             if (result && result.length > 0 ) {
                 
