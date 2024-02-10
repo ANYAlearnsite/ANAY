@@ -33,8 +33,12 @@ const deletefavorit = ([iduser,idlessons]) => {
   return  con.query(sql,[iduser,idlessons])
 }
 
+const updateImage=([image,iduser])=>{
+  const sql=`UPDATE user SET image=? WHERE iduser=?`
+  return con.query(sql,[image,iduser])
+}
 
 
 
 
-module.exports = {getall,getOne,updateU,favorite,addfavorit,deletefavorit}
+module.exports = {getall,getOne,updateU,favorite,addfavorit,deletefavorit,updateImage}

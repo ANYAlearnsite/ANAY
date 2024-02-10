@@ -6,9 +6,18 @@ import {useState,useEffect} from 'react'
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
+
+
 const User = ({ publicId }) => {
+  
+  
+   
+  
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
+  const decToken = jwtDecode(token)
+  console.log(decToken.user[0].image,"this is the imagetoken") 
+  
     const [userInfo, setUserInfo] = useState("");
     const [data, setData] = useState("");
 
@@ -47,14 +56,20 @@ const User = ({ publicId }) => {
 </a>
 
             <div className="flex items-center">
+             {
               <img
-                onClick={() => {
-                  navigate('/Update');
-                }}
-                src={`https://res.cloudinary.com/dcoxnxv3r/image/upload/${publicId}`}
-                alt="User Avatar"
-                className="w-8 h-8 rounded-full ml-2"
-              /> 
+              onClick={() => { 
+                
+                navigate('/Update');
+              }}
+              src={publicId.length>0 ? publicId : decToken.user[0].image  } 
+              
+              alt="User Avatar"
+              className="w-8 h-8 rounded-full ml-2"
+            /> 
+            
+
+             }
             </div>
           </div>
         </div>

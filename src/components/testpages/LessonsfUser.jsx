@@ -52,7 +52,7 @@ const LessonsfUser = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Frensh Land</div>
-               <Link to={`/lesoon/${lan.fr}`}>
+               <Link to={`/lesson/${lan.fr}`}>
                <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                   Go to lesson 
                 </button>
@@ -83,7 +83,7 @@ const LessonsfUser = () => {
               />
               <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Russain Land</div>
-               <Link to={`/test/${lan.ru}`}>
+               <Link to={`/lesson/${lan.ru}`}>
                <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                   Go to lesson
                 </button>

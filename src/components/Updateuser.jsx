@@ -1,23 +1,44 @@
 // InputCard.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
-const Updateuser= ({setPublicId}) => {
+const Updateuser = ({ setPublicId ,publicId}) => {
   const [image, setImage] = useState(null);
- 
+
+  const token = localStorage.getItem("token")
+  const decToken = jwtDecode(token)
 
 
 
-  const uplodeimages = () => {
+  const uplodeimages = async () => {
     const formData = new FormData();
     formData.append('file', image);
     formData.append('upload_preset', 'jm66fokf');
 
-    axios
-      .post('https://api.cloudinary.com/v1_1/dcoxnxv3r/image/upload', formData)
+    await axios.post('https://api.cloudinary.com/v1_1/dcoxnxv3r/image/upload', formData)
       .then((res) => {
-        console.log(res.data.public_id);
-        setPublicId(res.data.public_id)
+        setPublicId(res.data.secure_url)
+
+      })
+      .then(() => {
+        axios.put("http://localhost:3600/user/updateImage", {
+
+
+
+          id: decToken.user[0].iduser,
+          image: `https://res.cloudinary.com/dcoxnxv3r/image/upload/${publicId}`
+
+
+        }, {
+          headers: {
+            Autho: token
+
+          }
+
+
+        })
+
       })
       .catch((err) => {
         console.log(err);
@@ -27,6 +48,7 @@ const Updateuser= ({setPublicId}) => {
   const handleFileChange = (event) => {
     if (event.target.files[0]) {
       setImage(event.target.files[0]);
+      console.log(image, "this is imageeee")
     }
   };
 
@@ -58,12 +80,13 @@ const Updateuser= ({setPublicId}) => {
               onChange={handleFileChange}
             />
           </label>
+          {console.log(handleFileChange)}
           {image && <span className="text-gray-300">{image.name}</span>}
         </div>
       </div>
       <button
-     onClick={uplodeimages}
-      className="mt-6 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition duration-300">
+        onClick={uplodeimages}
+        className="mt-6 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition duration-300">
         Submit
       </button>
     </div>

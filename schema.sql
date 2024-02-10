@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`user` (
   `pwd` VARCHAR(255) NOT NULL,
   `role` VARCHAR(45) NOT NULL,
   `email` VARCHAR(200) NOT NULL,
+  `image` VARCHAR(255) NOT NULL DEFAULT 'https://shorturl.at/dGPRW',
   PRIMARY KEY (`iduser`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 2
@@ -39,15 +40,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `learn`.`lessons` (
   `idlessons` INT NOT NULL AUTO_INCREMENT,
   `category` VARCHAR(45) NOT NULL,
-
   `user_iduser` INT NOT NULL,
   PRIMARY KEY (`idlessons`),
   INDEX `fk_lessons_user1_idx` (`user_iduser` ASC) VISIBLE,
   CONSTRAINT `fk_lessons_user1`
     FOREIGN KEY (`user_iduser`)
-    REFERENCES `learn`.`user` (`iduser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `learn`.`user` (`iduser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -60,20 +58,15 @@ CREATE TABLE IF NOT EXISTS `learn`.`favorit` (
   `idfavorit` INT NOT NULL AUTO_INCREMENT,
   `user_iduser` INT NOT NULL,
   `lessons_idlessons` INT NOT NULL,
+  PRIMARY KEY (`idfavorit`),
   INDEX `fk_favorit_user1_idx` (`user_iduser` ASC) VISIBLE,
   INDEX `fk_favorit_lessons1_idx` (`lessons_idlessons` ASC) VISIBLE,
-  PRIMARY KEY (`idfavorit`),
-  CONSTRAINT `fk_favorit_user1`
-    FOREIGN KEY (`user_iduser`)
-    REFERENCES `learn`.`user` (`iduser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_favorit_lessons1`
     FOREIGN KEY (`lessons_idlessons`)
-    REFERENCES `learn`.`lessons` (`idlessons`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-
+    REFERENCES `learn`.`lessons` (`idlessons`),
+  CONSTRAINT `fk_favorit_user1`
+    FOREIGN KEY (`user_iduser`)
+    REFERENCES `learn`.`user` (`iduser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -85,19 +78,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `learn`.`lessons_link` (
   `idlessons_link` INT NOT NULL AUTO_INCREMENT,
   `urlvid` VARCHAR(255) NOT NULL,
-
   `lessons_idlessons` INT NOT NULL,
-
-
   PRIMARY KEY (`idlessons_link`),
   INDEX `fk_lessons_link_lessons1_idx` (`lessons_idlessons` ASC) VISIBLE,
   CONSTRAINT `fk_lessons_link_lessons1`
     FOREIGN KEY (`lessons_idlessons`)
-
-    REFERENCES `learn`.`lessons` (`idlessons`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-
+    REFERENCES `learn`.`lessons` (`idlessons`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -109,7 +95,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `learn`.`test` (
   `idtest` INT NOT NULL AUTO_INCREMENT,
   `score` VARCHAR(45) NOT NULL,
-
   `lessons_idlessons` INT NOT NULL,
   `user_iduser` INT NOT NULL,
   PRIMARY KEY (`idtest`),
@@ -120,10 +105,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`test` (
     REFERENCES `learn`.`lessons` (`idlessons`),
   CONSTRAINT `fk_test_user1`
     FOREIGN KEY (`user_iduser`)
-    REFERENCES `learn`.`user` (`iduser`)
-
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `learn`.`user` (`iduser`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;

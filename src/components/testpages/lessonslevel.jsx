@@ -6,10 +6,9 @@ import Fotter from "../Fotter";
 
 const LessonLevel = () => {
   const { lan } = useParams();
-  const language = {
+  const language = { 
     lan: lan,
   };
-
   const levels = [
     {
       level: "A1",
