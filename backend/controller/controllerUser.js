@@ -6,7 +6,8 @@ const {
   favorite,
   addfavorit,
   deletefavorit,
-  updateImage
+  updateImage,
+  insertscore
 } = require("../database/users");
 const bycribt = require("bcrypt");
 
@@ -75,22 +76,27 @@ module.exports = {
       console.log(err);
     }
   },
-  
-    UpdateImage: async (req, res) => {
-      const id = req.body.id;
-      const image = req.body.image;
-      
-      console.log("Received image update request: ", { id, image });
-  
-      try {
-        const result = await updateImage([image, id]);
-        console.log("Database update result: ", result);
-  
-        res.status(200).send("updated");
-      } catch (err) {
-        console.error(err);
-        res.status(500).send("Internal Server Error");
-      }
-    },
-  };
+
+
+UpdateImage : async (req,res)=>{
+  const id= req.body.id;
+  const image =req.body.image;
+  try{
+    const result = await updateImage([image,id])
+    res.status(200).send("updated")
+  }catch(err){throw(err)}
+
+},
+InsertScore : async (req,res)=>{
+  const score = req.body.score;
+  const iduser = req.body.iduser;
+  const name = req.body.name;
+  try{
+    const result = await insertscore([score,iduser,name])
+    res.status(200).send('inserted !')
+  }
+  catch(err){
+    throw(err)
+  }
+}
   
