@@ -26,11 +26,12 @@ const FavoritList = () => {
   }, [refresh]);
 
   const deleteLesson = (obj) => {
-    axios.delete(`http://localhost:3600/user/delete`,{
-        headers:{
-          Autho : token
+    axios
+      .delete(`http://localhost:3600/user/delete`, {
+        headers: {
+          Autho: token,
         },
-        data : obj
+        data: obj,
       })
       .then(() => {
         console.log("deleted fav");
