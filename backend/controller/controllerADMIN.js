@@ -92,4 +92,5 @@ const getoneus=async(req,res)=>{
     }}
 }
 
+
 module.exports={fetchallusers,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}

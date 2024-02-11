@@ -4,7 +4,7 @@ const con = mysql.createConnection({
   host: "localhost",
   user: "root",
 
-  password: "21018965",
+  password: "22802888",
   database: "learn"
 }).promise();
 
@@ -18,6 +18,7 @@ const getuser =(x)=>{
     const sql = `SELECT * FROM user WHERE email = ?`
     return con.query(sql,x)
 }
+
 
 const getall = ()=>{
     const sql = `SELECT * FROM user `

@@ -1,10 +1,11 @@
-// InputCard.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
-const Updateuser = ({ setPublicId ,publicId}) => {
+const Updateuser = ({ setPublicId, publicId }) => {
   const [image, setImage] = useState(null);
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   const token = localStorage.getItem("token");
   const decToken = jwtDecode(token);
@@ -17,7 +18,7 @@ const Updateuser = ({ setPublicId ,publicId}) => {
 
       const res = await axios.post('https://api.cloudinary.com/v1_1/dcoxnxv3r/image/upload', formData);
 
-      console.log( "this is the url",res.data.secure_url);
+      console.log("this is the url", res.data.secure_url);
       setPublicId(res.data.secure_url);
       localStorage.setItem("publicId", res.data.secure_url);
 
@@ -29,6 +30,9 @@ const Updateuser = ({ setPublicId ,publicId}) => {
           Autho: token
         }
       });
+
+      // Redirect to the /user route after successful update
+      navigate('/user');
 
     } catch (error) {
       console.error(error);

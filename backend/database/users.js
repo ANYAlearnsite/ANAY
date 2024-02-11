@@ -3,7 +3,7 @@ const {con} = require('./db')
 const getall = () => {
   const sql = 'SELECT l.idlessons,l.category,ll.urlvid FROM `lessons` l JOIN lessons_link ll ON l.idlessons = ll.lessons_idlessons'
   return con.query(sql)
-}
+} 
 
 const getOne = (idlessons) => {
   const sql = 'SELECT * FROM `lessons` WHERE `idlessons` = ?'

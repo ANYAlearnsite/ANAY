@@ -29,6 +29,7 @@ import UpDateU from './components/UpDateU.jsx';
 
 function App() {
   const [publicId, setPublicId] = useState("")
+  const [lessondata,setLessondata]=useState("")
   return (
     <div className="App">
       <Router>
@@ -37,10 +38,10 @@ function App() {
         <Route path='/' element={<IntroPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
-      <Route path="/user" element={<User publicId={publicId}/>}/>
+      <Route path="/user" element={<User publicId={publicId } setLessondata={setLessondata}/>}/>
       <Route path="/Update" element={<Update setPublicId={setPublicId} publicId={publicId}/>}/>
-      <Route path="/lesson" element={<Lesson/>}/>
-      <Route path="/lessonfUser" element={<LessonsfUser/>}/>
+      <Route path="/lesson" element={<Lesson lessondata={lessondata} />}/>
+      <Route path="/lessonfUser" element={<LessonsfUser lessondata={lessondata}/>}/> 
 
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>

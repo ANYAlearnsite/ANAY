@@ -8,6 +8,7 @@ import Fotter from "../Fotter";
 import { Link } from "react-router-dom";
 
 const LessonsfUser = () => {
+ 
   const lan = {
     fr: "frensh",
     all: "allmend",
@@ -38,7 +39,7 @@ const LessonsfUser = () => {
                 <div className="font-bold text-xl mb-2">English Land</div>
                 <Link to={`/lesson/${lan.en}`}> 
                   <button className="bg-sky-950 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    Go to lesson 
+                    Go to lesson
                   </button>
                 </Link>
               </div>
