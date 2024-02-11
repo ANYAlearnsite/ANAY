@@ -38,7 +38,10 @@ const updateImage=([image,iduser])=>{
   return con.query(sql,[image,iduser])
 }
 
+const insertscore = ([score,iduser,name])=>{
+  const sql = `INSERT INTO test (score,user_iduser,name) VALUES (?,?,?)`
+  return con.query(sql,[score,iduser,name])
+}
 
 
-
-module.exports = {getall,getOne,updateU,favorite,addfavorit,deletefavorit,updateImage}
+module.exports = {getall,getOne,updateU,favorite,addfavorit,deletefavorit,updateImage,insertscore}

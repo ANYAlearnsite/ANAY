@@ -18,6 +18,8 @@ RouterUsers.delete('/delete',authenticateToken,controlleruser.deletefavless)
 //Ahmed cloudinary 
 RouterUsers.put("/updateImage",authenticateToken,controlleruser.UpdateImage)  
 
+//insert score test 
+RouterUsers.post("/testresult",authenticateToken,controlleruser.InsertScore)
 
 
 module.exports = RouterUsers

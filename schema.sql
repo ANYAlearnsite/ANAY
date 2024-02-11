@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`user` (
   `image` VARCHAR(255) NOT NULL DEFAULT 'https://shorturl.at/dGPRW',
   PRIMARY KEY (`iduser`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -95,14 +95,10 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `learn`.`test` (
   `idtest` INT NOT NULL AUTO_INCREMENT,
   `score` VARCHAR(45) NOT NULL,
-  `lessons_idlessons` INT NOT NULL,
   `user_iduser` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idtest`),
-  INDEX `fk_test_lessons1_idx` (`lessons_idlessons` ASC) VISIBLE,
   INDEX `fk_test_user1_idx` (`user_iduser` ASC) VISIBLE,
-  CONSTRAINT `fk_test_lessons1`
-    FOREIGN KEY (`lessons_idlessons`)
-    REFERENCES `learn`.`lessons` (`idlessons`),
   CONSTRAINT `fk_test_user1`
     FOREIGN KEY (`user_iduser`)
     REFERENCES `learn`.`user` (`iduser`))
