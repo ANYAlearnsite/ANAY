@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import NavBaruser from "../NavBaruser";
 import Fotter from "../Fotter";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import ScoreLevel from "./ScoreLevel.jsx";
 
 const Quiz = () => {
+  const token = localStorage.getItem("token")
+  const dectoken = jwtDecode(token)
+  console.log( "dectoken",);
   const [data, setData] = useState([]);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const { languge, level } = useParams();
-  console.log(languge, level);
-
+  const nametest = languge +'/'+level
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,6 +34,21 @@ const Quiz = () => {
   const saveresult = () => {
     // Implement logic to save the user's result
     console.log("Save result logic goes here");
+    axios.post("http://localhost:3600/user/testresult",{
+      score: score,
+      iduser:dectoken.user[0].iduser,
+      name:nametest
+    },{
+      headers:{
+        Autho : token
+      }
+    })
+    .then(()=>{
+      navigate('/user')
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
   };
 
   const handleAnswerSelection = (optionIndex) => {

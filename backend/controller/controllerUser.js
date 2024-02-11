@@ -1,3 +1,4 @@
+
 const {
   getall,
   getOne,
@@ -5,6 +6,8 @@ const {
   favorite,
   addfavorit,
   deletefavorit,
+  updateImage,
+  insertscore
 } = require("../database/users");
 const bycribt = require("bcrypt");
 
@@ -73,4 +76,27 @@ module.exports = {
       console.log(err);
     }
   },
-};
+
+
+UpdateImage : async (req,res)=>{
+  const id= req.body.id;
+  const image =req.body.image;
+  try{
+    const result = await updateImage([image,id])
+    res.status(200).send("updated")
+  }catch(err){throw(err)}
+
+},
+InsertScore : async (req,res)=>{
+  const score = req.body.score;
+  const iduser = req.body.iduser;
+  const name = req.body.name;
+  try{
+    const result = await insertscore([score,iduser,name])
+    res.status(200).send('inserted !')
+  }
+  catch(err){
+    throw(err)
+  }
+}
+  

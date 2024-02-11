@@ -1,4 +1,5 @@
 // Lesson.jsx
+
 import React from 'react';
 
 const Lesson = () => {
