@@ -6,49 +6,39 @@ import { jwtDecode } from 'jwt-decode';
 const Updateuser = ({ setPublicId ,publicId}) => {
   const [image, setImage] = useState(null);
 
-  const token = localStorage.getItem("token")
-  const decToken = jwtDecode(token)
-
-
+  const token = localStorage.getItem("token");
+  const decToken = jwtDecode(token);
 
   const uplodeimages = async () => {
-    const formData = new FormData();
-    formData.append('file', image);
-    formData.append('upload_preset', 'jm66fokf');
+    try {
+      const formData = new FormData();
+      formData.append('file', image);
+      formData.append('upload_preset', 'jm66fokf');
 
-    await axios.post('https://api.cloudinary.com/v1_1/dcoxnxv3r/image/upload', formData)
-      .then((res) => {
-        setPublicId(res.data.secure_url)
+      const res = await axios.post('https://api.cloudinary.com/v1_1/dcoxnxv3r/image/upload', formData);
 
-      })
-      .then(() => {
-        axios.put("http://localhost:3600/user/updateImage", {
+      console.log( "this is the url",res.data.secure_url);
+      setPublicId(res.data.secure_url);
+      localStorage.setItem("publicId", res.data.secure_url);
 
-
-
-          id: decToken.user[0].iduser,
-          image: `https://res.cloudinary.com/dcoxnxv3r/image/upload/${publicId}`
-
-
-        }, {
-          headers: {
-            Autho: token
-
-          }
-
-
-        })
-
-      })
-      .catch((err) => {
-        console.log(err);
+      await axios.put("http://localhost:3600/user/updateImage", {
+        id: decToken.user[0].iduser,
+        image: res.data.public_id || res.data.secure_url
+      }, {
+        headers: {
+          Autho: token
+        }
       });
+
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleFileChange = (event) => {
     if (event.target.files[0]) {
       setImage(event.target.files[0]);
-      console.log(image, "this is imageeee")
+      console.log(setImage, "this is imageeee");
     }
   };
 
@@ -80,13 +70,13 @@ const Updateuser = ({ setPublicId ,publicId}) => {
               onChange={handleFileChange}
             />
           </label>
-          {console.log(handleFileChange)}
           {image && <span className="text-gray-300">{image.name}</span>}
         </div>
       </div>
       <button
         onClick={uplodeimages}
-        className="mt-6 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition duration-300">
+        className="mt-6 bg-white text-blue-500 py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition duration-300"
+      >
         Submit
       </button>
     </div>
@@ -94,4 +84,3 @@ const Updateuser = ({ setPublicId ,publicId}) => {
 };
 
 export default Updateuser;
-
