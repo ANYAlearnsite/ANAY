@@ -14,14 +14,14 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3600/getusers`, {
+      .get(`http://localhost:3600/admin/allusers`, {
         headers: {
           Autho: token,
         },
       })
       .then((data) => {
         // console.log("data for the admin ", data.data);
-        setData(data.data);
+        setData(data.data[0]);
       })
       .then(() => {
         setUserInfo(jwtDecode(token).user);
@@ -32,35 +32,33 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen">
-      {/* Navbar */}
-      <NavBaruser />
+    <div>
+     <NavBaruser/>
+    <div className="flex h-screen">
+      <div className="bg-blue-100 w-64 py-4 px-6">
+        <ul className="sidebar-nav">
+          <Link to="/admin"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>
+          <li>
+            <Link to="/userslist" className="text-gray-800 hover:text-blue-500">
+              Users
+            </Link>
+          </li>
+         <br />
+          <li>
+            <Link to="/lessonslist" className="text-gray-800 hover:text-blue-500">
+              Lessons
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-      {/* Content */}
-      <div className="flex flex-grow">
-        {/* Sidebar */}
-        <div className="bg-blue-100 w-64 flex flex-col">
-          <ul className="sidebar-nav mt-4">
-            <li className="text-gray-800 font-semibold mb-4">Dashboard</li>
-            <li>
-              <Link to="/userslist" className="text-gray-800 hover:text-blue-500 block">
-                Users
-              </Link>
-            </li>
-            <li>
-              <Link to="/lessonslist" className="text-gray-800 hover:text-blue-500 block">
-                Lessons
-              </Link>
-            </li>
-          </ul>
-        </div>
 
         {/* Stat Component */}
         <div className="flex-1 bg-gray-200 flex items-center justify-center">
           <Stat />
         </div>
       </div>
-      {/* <Fotter /> */}
+      <Fotter />
 
     </div>
   );

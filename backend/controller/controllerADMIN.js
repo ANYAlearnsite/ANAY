@@ -55,8 +55,8 @@ const adduserrr=async(req,res)=>{
 const removeuser=async(req,res)=>{
     try{
         const id=req.params.id
-     await db.deluser(id)
-res.send(" deleted")  
+    const data =  db.deluser(id)
+res.json(data)  
   }
     catch{(err)=>{
         console.log(err)
@@ -107,9 +107,10 @@ const getoneus=async(req,res)=>{
 
 const createlesson=async(req,res)=>{
     try{
-        let urlvid=req.body.urlvid
         let lesson = req.body.lesson
-        await db.addlesson(lesson,urlvid)
+        let link=req.body.link
+
+         db.addlesson(lesson,link)
         res.send("added !")
     }
     catch{(err)=>{

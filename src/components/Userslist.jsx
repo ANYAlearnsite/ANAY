@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NavBaruser from "./NavBaruser";
+import Fotter from "./Fotter";
 const Users = () => {
   const [datausers, setdatausers] = useState([]);
   const [refresh, setrefresh] = useState(false);
@@ -51,7 +52,7 @@ const Users = () => {
               Users
             </Link>
           </li>
-         
+         <br />
           <li>
             <Link to="/lessonslist" className="text-gray-800 hover:text-blue-500">
               Lessons
@@ -131,6 +132,7 @@ const Users = () => {
         </div>
       )}
     </div>
+    <Fotter/>
    </div>
   );
 };

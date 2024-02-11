@@ -6,8 +6,9 @@ import { useParams } from "react-router-dom";
 
 const Searchuser = () => {
   const [one, setOne] = useState([]);
+  const[refresh,setrefresh]= useState(false)
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
-  const [userToDelete, setUserToDelete] = useState(null);
+  const [userToDelete, setUserToDelete] = useState({});
   const { name } = useParams();
 
   useEffect(() => {
@@ -33,8 +34,8 @@ const Searchuser = () => {
         .then(() => {
           console.log("User deleted");
           setShowDeleteConfirmation(false);
-          setOne(one.filter(u => u.iduser !== userToDelete.iduser)); // Remove deleted user from state
-          setUserToDelete(null); // Reset userToDelete after deletion
+          setUserToDelete(null); 
+          // setrefresh(!refresh)
         })
         .catch((err) => {
           console.log(err);

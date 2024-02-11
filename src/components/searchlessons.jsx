@@ -42,6 +42,10 @@ const SearchLessons = () => {
                 </div>
                 <div className="mb-4">
                   <span className="font-semibold">Category:</span> {e.category}
+                  <video width="300" height="200" controls className="w-full rounded-t-lg">
+            <source src={e.urlvid} type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+          </video>
                 </div>
               </div>
             ))}

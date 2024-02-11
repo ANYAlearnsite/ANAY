@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
 import Admin from './components/Admin.jsx';
@@ -11,11 +12,13 @@ import Quiz from './components/testpages/Quiz.jsx';
 import Users from "./components/Userslist.jsx";
 import LessonsList from './components/lessonsList.jsx';
 import UpdateRole from "./components/update.jsx";
-import Addlesson from './components/addlesson.jsx';
 import Updatelesson from './components/Updatelesson.jsx';
 import Searchuser from './components/searchuser.jsx';
 import Stat from './components/stat.jsx';
 import SearchLessons from './components/searchlessons.jsx';
+import Lesson from './components/Lesson.jsx';
+import UpDateU from "./components/UpDateU.jsx";
+import Addlesson from './components/addlesson.jsx';
 function App() {
   const [publicId, setPublicId] = useState('')
   return (
@@ -30,7 +33,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User publicId={publicId}/>}/>
-      <Route path="/Update" element={<Update setPublicId={setPublicId}/>}/>
+      <Route path="/Update" element={<UpDateU setPublicId={setPublicId}/>}/>
       <Route path="/lesson" element={<Lesson/>}/>
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>
@@ -39,11 +42,12 @@ function App() {
       <Route path='/userslist' element={<Users/>}/>
       <Route path='/lessonslist' element={<LessonsList/>}/>
       <Route path='/update/:id' element={<UpdateRole/>}/>
-      <Route path='/addlesson' element={<Addlesson/>}/>
       <Route path='/updatelesson/:id' element={<Updatelesson/>}/>
       <Route path='/searchforuser/:name' element={<Searchuser/>}/>
       <Route path='/stat' element={<Stat/>}/>
       <Route path='/searchLessons/:category' element={<SearchLessons/>}/>
+      <Route path='/addlesson' element={<Addlesson/>}/>
+
 
 
       </Routes>

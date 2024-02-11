@@ -2,12 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBaruser from "./NavBaruser";
+import Fotter from "./Fotter";
 const LessonsList = () => {
   const [datalessons, setdatalessons] = useState([]);
   const [category, setcategory] = useState("");
 const [refresh,setrefresh]=useState(false)
+
+
   useEffect(() => {
-    axios.get('http://localhost:3600/admin/allvideoslessons')
+    axios.get('http://localhost:3600/admin/alllessons')
       .then((results) => {
         console.log("Lessons fetched");
         setdatalessons(results.data[0]);
@@ -22,7 +25,7 @@ const [refresh,setrefresh]=useState(false)
     axios.delete(`http://localhost:3600/admin/delete/${id}`)
       .then(() => {
         console.log("Lesson deleted");
-        axios.get('http://localhost:3600/admin/allvideoslessons')
+        axios.get('http://localhost:3600/admin/alllessons')
           .then((results) => {
             setdatalessons(results.data[0]);
           })
@@ -46,9 +49,16 @@ const [refresh,setrefresh]=useState(false)
               Users
             </Link>
           </li>
+          <br />
           <li>
             <Link to="/lessonslist" className="text-gray-800 hover:text-blue-500">
               Lessons
+            </Link>
+          </li>
+          <br />
+          <li>
+            <Link to="/addlesson" className="text-gray-800 hover:text-blue-500">
+              add lesson
             </Link>
           </li>
         </ul>
@@ -76,7 +86,7 @@ const [refresh,setrefresh]=useState(false)
           {datalessons.map((lesson) => (
             <div key={lesson.idlessons} className="bg-white rounded-md shadow-md p-4 relative">
               <div className="mb-4">
-                <span className="font-semibold">ID:</span> {lesson.idlessons_link}
+                <span className="font-semibold">ID:</span> {lesson.idlessons}
               </div>
               <div className="mb-4">
                 <span className="font-semibold">Category:</span> {lesson.category}
@@ -85,9 +95,7 @@ const [refresh,setrefresh]=useState(false)
               </div>
               
               <video width="300" height="200" controls className="w-full rounded-t-lg">
-            <source src={lesson.urlvid} type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
+            <source src={lesson.urlvid} type="MP4/OGG" />
           </video>
               <div className="flex justify-end mt-4">
                 <button
@@ -99,7 +107,7 @@ const [refresh,setrefresh]=useState(false)
                 >
                   Delete
                 </button>
-                <Link to={`/updatelesson/${lesson.idlessons_link}`}>
+                <Link to={`/updatelesson/${lesson.idlessons}`}>
                   <button
                     className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
                   >
@@ -112,6 +120,8 @@ const [refresh,setrefresh]=useState(false)
         </div>
       </div>
     </div>
+    <Fotter/>
+
     </div>
   );
 };
