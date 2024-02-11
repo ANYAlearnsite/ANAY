@@ -76,6 +76,8 @@ module.exports = {
       console.log(err);
     }
   },
+
+
 UpdateImage : async (req,res)=>{
   const id= req.body.id;
   const image =req.body.image;
@@ -98,4 +100,3 @@ InsertScore : async (req,res)=>{
   }
 }
   
-};

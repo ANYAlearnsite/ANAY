@@ -33,10 +33,10 @@ const deletefavorit = ([iduser,idlessons]) => {
   return  con.query(sql,[iduser,idlessons])
 }
 
-const updateImage=([image,iduser])=>{
-  const sql=`UPDATE user SET image=? WHERE iduser=?`
-  return con.query(sql,[image,iduser])
-}
+const updateImage = async ([image, iduser]) => {
+  const sql = `UPDATE user SET image=? WHERE iduser=?`;
+  return con.query(sql, [image, iduser]);
+};
 
 const insertscore = ([score,iduser,name])=>{
   const sql = `INSERT INTO test (score,user_iduser,name) VALUES (?,?,?)`
