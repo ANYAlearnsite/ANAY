@@ -4,12 +4,11 @@ import NavBaruser from "../NavBaruser";
 import { Link } from "react-router-dom";
 import Fotter from "../Fotter";
 
-const Testlvl = () => {
+const LessonLevel = () => {
   const { lan } = useParams();
-  const languge = {
+  const language = { 
     lan: lan,
   };
-  console.log(languge.lan);
   const levels = [
     {
       level: "A1",
@@ -45,16 +44,16 @@ const Testlvl = () => {
         <div className="container mx-auto py-8">
           <h3 className="mt-4 text-center text-xl font-bold text-white">
             Welcome! You chose the {lan} quiz test. Please select the level:
-          </h3> 
+          </h3>
           <div className="flex justify-center items-center h-screen">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {levels.map((level, index) => (
                 <div key={index} className="bg-white p-4 rounded-md shadow-md mt-4">
                   <h2 className="text-2xl font-bold mb-4">{level.level}</h2>
                   <p className="text-gray-700">{level.description}</p>
-                  <Link to={`/test/${languge.lan}/${level.level}`}>
+                  <Link to={`/lesson`}>
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4">
-                      Go to {level.level} Test
+                      Go to {level.level} lesson
                     </button>
                   </Link>
                 </div>
@@ -68,4 +67,4 @@ const Testlvl = () => {
   );
 };
 
-export default Testlvl;
+export default LessonLevel;

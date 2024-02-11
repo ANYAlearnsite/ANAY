@@ -4,6 +4,7 @@ const con = mysql.createConnection({
   host: "localhost",
   user: "yessine",
   password: "yessine147",
+
   database: "learn"
 }).promise();
 

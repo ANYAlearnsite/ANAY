@@ -1,4 +1,5 @@
 // Lesson.jsx
+
 import React from 'react';
 
 const Lesson = () => {
@@ -24,7 +25,7 @@ const Lesson = () => {
             Button
           </button>
         </div>
-      </div>
+      </div>  
     </div>
   );
 };
