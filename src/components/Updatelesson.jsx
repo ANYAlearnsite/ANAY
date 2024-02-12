@@ -21,7 +21,7 @@ const updateeee=()=>{
       <div className="flex h-screen">
       <div className="bg-blue-100 w-64 py-4 px-6">
         <ul className="sidebar-nav">
-        <Link to="/"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>          <li>
+        <Link to="/admin"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>          <li>
             <Link to="/userslist" className="text-gray-800 hover:text-blue-500">
               Users
             </Link>

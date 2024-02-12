@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
 import Admin from './components/Admin.jsx';
@@ -11,9 +12,15 @@ import Quiz from './components/testpages/Quiz.jsx';
 import Users from "./components/Userslist.jsx";
 import LessonsList from './components/lessonsList.jsx';
 import UpdateRole from "./components/update.jsx";
-import Addlesson from './components/addlesson.jsx';
 import Updatelesson from './components/Updatelesson.jsx';
 import Searchuser from './components/searchuser.jsx';
+
+import Stat from './components/stat.jsx';
+import SearchLessons from './components/searchlessons.jsx';
+import Lesson from './components/Lesson.jsx';
+import UpDateU from "./components/UpDateU.jsx";
+import Addlesson from './components/addlesson.jsx';
+
 import Update from './components/Updateuser.jsx'
 import { useState } from 'react';
 import Lesson from './components/Lesson.jsx'; 
@@ -25,6 +32,7 @@ import AllLessons from './components/AllLessons.jsx';
 import FavoritList from './components/FavoritList.jsx';
 import SearchLesson from './components/SearchLesson.jsx';
 import UpDateU from './components/UpDateU.jsx';
+
 
 
 function App() {
@@ -39,13 +47,19 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User publicId={publicId } setLessondata={setLessondata}/>}/>
+      <Route path="/user" element={<User publicId={publicId}/>}/>
+
       <Route path="/Update" element={<Update setPublicId={setPublicId} publicId={publicId}/>}/>
       <Route path="/lesson" element={<Lesson lessondata={lessondata} />}/>
       <Route path="/lessonfUser" element={<LessonsfUser lessondata={lessondata}/>}/> 
 
+      <Route path="/lesson" element={<Lesson/>}/>
+      <Route path="/lessonfUser" element={<LessonsfUser/>}/>
+
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>
       <Route path= "/test/:lan" element={<Testlvl/>}/>
+
 
       <Route path= "/lesson/:lan" element={<LessonLevel/>}/>
     
@@ -58,11 +72,13 @@ function App() {
       <Route path='/update/:id' element={<UpdateRole/>}/>
       <Route path='/addlesson' element={<Addlesson/>}/> 
       <Route path='/updatelesson/:id' element={<Updatelesson/>}/> 
+
       <Route path='/searchforuser/:name' element={<Searchuser/>}/>
-      <Route path="/allLessons" element={<AllLessons/>}/>
-      <Route path="/favoritList" element={<FavoritList/>}/>
-      <Route path="/upDateU" element={<UpDateU/>}/>
-      <Route path="/SearchLesson" element={<SearchLesson/>}/>
+      <Route path='/stat' element={<Stat/>}/>
+      <Route path='/searchLessons/:category' element={<SearchLessons/>}/>
+      <Route path='/addlesson' element={<Addlesson/>}/>
+
+
 
       </Routes>
       

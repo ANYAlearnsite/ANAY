@@ -10,10 +10,9 @@ import { jwtDecode } from 'jwt-decode';
 const Login = () => {
   const [email, setEmail] = useState('')
   const [pwd, setPwd] = useState('')
-  const [role, setRole] = useState('');
   const navigate = useNavigate()
   const obj =
-    { email: email, pwd: pwd, role: role }
+    { email: email, pwd: pwd, }
 
   const loging = async () => {
     try {
@@ -64,36 +63,6 @@ const Login = () => {
             <div class="flex items-start">
 
             </div>
-            <div class="flex items-start mt-2">
-              <div class="flex items-start">
-                <div class="flex items-center h-5">
-                  <input
-                    id="isAdmin"
-                    type="checkbox"
-
-                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                    onChange={() => setRole('admin')}
-                  />
-                </div>
-                <label for="isAdmin" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Login as Admin</label>
-              </div>
-            </div>
-
-            <div class="flex items-start mt-2">
-              <div class="flex items-start">
-                <div class="flex items-center h-5">
-                  <input
-                    id="isUser"
-                    type="checkbox"
-
-                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-                    onChange={() => setRole('user')}
-                  />
-                </div>
-                <label for="isUser" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Login as User</label>
-              </div>
-            </div>
-
             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={() => {
               loging()
             }}>Login to your account</button>

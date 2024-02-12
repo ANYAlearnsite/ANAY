@@ -6,8 +6,9 @@ import { useParams } from "react-router-dom";
 
 const Searchuser = () => {
   const [one, setOne] = useState([]);
+  const[refresh,setrefresh]= useState(false)
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
-  const [userToDelete, setUserToDelete] = useState(null);
+  const [userToDelete, setUserToDelete] = useState({});
   const { name } = useParams();
 
   useEffect(() => {
@@ -33,8 +34,8 @@ const Searchuser = () => {
         .then(() => {
           console.log("User deleted");
           setShowDeleteConfirmation(false);
-          setOne(one.filter(u => u.iduser !== userToDelete.iduser)); // Remove deleted user from state
-          setUserToDelete(null); // Reset userToDelete after deletion
+          setUserToDelete(null); 
+          // setrefresh(!refresh)
         })
         .catch((err) => {
           console.log(err);
@@ -48,7 +49,7 @@ const Searchuser = () => {
       <div className="flex h-screen">
         <div className="bg-blue-100 w-64 py-4 px-6">
           <ul className="sidebar-nav">
-            <li className="text-gray-800 font-semibold mb-4">Dashboard</li>
+           <Link to="/admin"> <li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>
             <li>
               <Link to="/userslist" className="text-gray-800 hover:text-blue-500">
                 Users
@@ -63,7 +64,6 @@ const Searchuser = () => {
         </div>
 
         <div className="flex-1 overflow-y-auto p-8">
-          <h1 className="mb-4">hello</h1>
           {one.map((user) => (
             <div key={user.iduser} className="bg-white rounded-md shadow-md p-4 mb-4 mr-4">
               <div className="mb-2">

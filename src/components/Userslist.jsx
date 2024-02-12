@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NavBaruser from "./NavBaruser";
+import Fotter from "./Fotter";
 const Users = () => {
   const [datausers, setdatausers] = useState([]);
   const [refresh, setrefresh] = useState(false);
@@ -45,12 +46,13 @@ const Users = () => {
     <div className="flex h-screen">
       <div className="bg-blue-100 w-64 py-4 px-6">
         <ul className="sidebar-nav">
-          <Link to="/"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>
+          <Link to="/admin"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>
           <li>
             <Link to="/userslist" className="text-gray-800 hover:text-blue-500">
               Users
             </Link>
           </li>
+         <br />
           <li>
             <Link to="/lessonslist" className="text-gray-800 hover:text-blue-500">
               Lessons
@@ -130,6 +132,7 @@ const Users = () => {
         </div>
       )}
     </div>
+    <Fotter/>
    </div>
   );
 };

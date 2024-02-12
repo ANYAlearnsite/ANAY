@@ -1,5 +1,18 @@
 const db=require('../database/dbADMIN')
 
+
+
+const fetchalltests=async(req,res)=>{
+    try{
+        const data=await db.alltests()
+        res.json(data)
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
+
+
 const fetchallusers= async (req,res)=>{
 try{
     const data=await db.getallusers()
@@ -31,7 +44,7 @@ const fetchallvideoslessons=async(req,res)=>{
 const adduserrr=async(req,res)=>{
     try{
         const newone=req.body
-        await db.adduser(newone)
+         db.adduser(newone)
         res.status(201).send("user added successfully !")
     }
     catch{(err)=>{
@@ -42,11 +55,11 @@ const adduserrr=async(req,res)=>{
 const removeuser=async(req,res)=>{
     try{
         const id=req.params.id
-        const data=   await db.deluser(id)
+    const data =  db.deluser(id)
 res.json(data)  
   }
     catch{(err)=>{
-        console.log(err);
+        console.log(err)
     }}
 }
 const updated=async(req,res)=>{
