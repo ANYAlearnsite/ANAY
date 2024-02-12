@@ -1,11 +1,11 @@
-const db=require('../database/dbADMIN')
+const db = require('../database/dbADMIN')
 
 
 
 const fetchalltests=async(req,res)=>{
     try{
         const data=await db.alltests()
-        res.json(data)
+        res.json(data[0])
     }
     catch{(err)=>{
         console.log(err);
@@ -16,7 +16,7 @@ const fetchalltests=async(req,res)=>{
 const fetchallusers= async (req,res)=>{
 try{
     const data=await db.getallusers()
-res.status(200).json(data)
+res.status(200).json(data[0])
 }
 catch{(err)=>{
 console.log(err);
@@ -25,7 +25,7 @@ console.log(err);
 const fetchalllessons=async(req,res)=>{
     try{
         const data=await db.getalllessons()
-        res.status(200).json(data)
+        res.status(200).json(data[0])
     }
     catch{(err)=>{
         console.log(err);
@@ -34,7 +34,7 @@ const fetchalllessons=async(req,res)=>{
 const fetchallvideoslessons=async(req,res)=>{
     try{
         const data=await db.getvideoslessons()
-        res.status(200).json(data)
+        res.status(200).json(data[0])
     }
     catch{(err)=>{
         console.log(err);
@@ -54,9 +54,9 @@ const adduserrr=async(req,res)=>{
 
 const removeuser=async(req,res)=>{
     try{
-        const id=req.params.id
+        const id = req.params.id
     const data =  db.deluser(id)
-res.json(data)  
+        res.json("deleted ! ")  
   }
     catch{(err)=>{
         console.log(err)
@@ -66,7 +66,7 @@ const updated=async(req,res)=>{
     try{
         let id=req.params.id
         let role=req.body.role
-        await db.updrole(role,id)
+       const result =  await db.updrole(role,id)
         res.send('updated ')
     }
     catch{(err)=>{
@@ -77,7 +77,7 @@ const uplesson=async(req,res)=>{
 try{
     let id=req.params.id
     let newurl=req.body.urlvid
-    await db.updatelesson(newurl,id)
+   const result =  await db.updatelesson(newurl,id)
     res.send("updated")
 }
 catch{(err)=>{
@@ -87,7 +87,7 @@ catch{(err)=>{
 const dllesson=async(req,res)=>{
     try{
         const id=req.params.id
-        await db.deletelesson(id)
+       const result = await db.deletelesson(id)
         res.send('lesson deleted')
     }
     catch {(err)=>{
@@ -98,7 +98,7 @@ const getoneus=async(req,res)=>{
     try{
         let username=req.params.name
         const data=await db.getoneuser(username)
-        res.json(data)
+        res.json(data[0])
     }
     catch{(err)=>{
         console.log(err);
@@ -109,7 +109,7 @@ const createlesson=async(req,res)=>{
         let lesson = req.body.lesson
         let link=req.body.link
 
-         db.addlesson(lesson,link)
+        const result = await  db.addlesson(lesson,link)
         res.send("added !")
     }
     catch{(err)=>{
@@ -120,11 +120,11 @@ const searchcatego=async(req,res)=>{
     const categ=req.params.category
     try{
         const data=await db.searchbycategory(categ)
-        res.json(data)
+        res.json(data[0])
     }
     catch{(err)=>{
         console.log(err);
     }}
 }
 
-module.exports={fetchallusers,searchcatego,fetchalltests,createlesson,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}
+module.exports={fetchallusers,fetchalllessons,searchcatego,createlesson,fetchalltests,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus} 

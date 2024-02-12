@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import Fotter from "./Fotter.jsx";
+import NavBar from "./NavBar.jsx";
 
 const Submituser = () => {
   const [name, setName] = useState("");
@@ -25,7 +26,9 @@ const Submituser = () => {
 
   return (
     <div>
+      
       <div>
+        <NavBar/>
         <div className="flex items-center justify-center h-screen bg-gradient-to-r from-cyan-500 to-blue-50">
           <div class=" w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
             <div class="space-y-6" action="#">

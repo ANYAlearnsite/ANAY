@@ -6,6 +6,8 @@ import germanyf from "../../images/flags/gerf.webp";
 import russianf from "../../images/flags/rf.jpg";
 import Fotter from "../Fotter";
 import { Link } from "react-router-dom";
+import NavBar from "../NavBar";
+import NavBaruser from "../NavBaruser";
 
 const LessonsfUser = () => {
  
@@ -24,6 +26,7 @@ const LessonsfUser = () => {
 
   return (
     <>
+    <NavBaruser/>
       <div className="bg-gradient-to-r from-cyan-400 to-sky-800 min-h-screen flex items-center justify-center">
         <div className="text-white text-center">
           <h1 className="text-4xl font-bold mb-4">Welcome to Our Lessons Zone!</h1>

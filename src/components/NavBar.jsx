@@ -6,7 +6,7 @@ const NavBar = () => {
     <div>
       <nav className="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
         <div className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-          <div className="text-indigo-500 md:order-1">
+          <div  className="text-indigo-500 md:order-1">
             <img src={brainImage} className="h-10 w-10" alt="Brain Image" />
           </div>
           <div className="text-gray-500 order-3 w-full md:w-auto md:order-2">

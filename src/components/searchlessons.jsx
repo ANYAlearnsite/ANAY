@@ -10,7 +10,7 @@ const SearchLessons = () => {
   useEffect(() => {
     axios.get(`http://localhost:3600/admin/${category}`)
       .then((results) => {
-        setLessons(results.data[0]);
+        setLessons(results.data);
       })
       .catch((err) => {
         console.log(err);
@@ -38,14 +38,23 @@ const SearchLessons = () => {
             {lessons.map((e) => (
               <div key={e.idlessons} className="bg-white rounded-md shadow-md p-4 relative">
                 <div className="mb-4">
-                  <span className="font-semibold">ID:</span> {e.idlessons}
+                  <span className="font-semibold">ID: {e.idlessons}</span> 
                 </div>
                 <div className="mb-4">
-                  <span className="font-semibold">Category:</span> {e.category}
-                  <video width="300" height="200" controls className="w-full rounded-t-lg">
-            <source src={e.urlvid} type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-          </video>
+                  <span className="font-semibold">Category: {e.category}</span> 
+                  <iframe
+                  width="325"
+                  height="250"
+                  src={
+                    "https://www.youtube.com/embed/" +
+                    e.urlvid +
+                    "?enablejsapi=1"
+                  }
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
                 </div>
               </div>
             ))}

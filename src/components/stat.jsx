@@ -10,7 +10,7 @@ const Stat = () => {
     axios.get("http://localhost:3600/admin/allusers")
       .then((results) => {
         console.log('data fetched');
-        setdatausers(results.data[0]);
+        setdatausers(results.data);
       })
       .catch((err) => {
         console.log(err);
@@ -21,7 +21,7 @@ const Stat = () => {
     axios.get("http://localhost:3600/admin/alllessons")
       .then((results) => {
         console.log('data fetched');
-        setdatalessons(results.data[0]);
+        setdatalessons(results.data);
       })
       .catch((err) => {
         console.log(err);
@@ -32,7 +32,7 @@ const Stat = () => {
     axios.get("http://localhost:3600/admin/alltests")
       .then((results) => {
         console.log('data fetched');
-        setdatatests(results.data[0]);
+        setdatatests(results.data);
       })
       .catch((err) => {
         console.log(err);

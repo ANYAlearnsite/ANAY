@@ -14,17 +14,17 @@ import LessonsList from './components/lessonsList.jsx';
 import UpdateRole from "./components/update.jsx";
 import Updatelesson from './components/Updatelesson.jsx';
 import Searchuser from './components/searchuser.jsx';
-
+import FavoritList from './components/FavoritList.jsx'
 import Stat from './components/stat.jsx';
 import SearchLessons from './components/searchlessons.jsx';
 import Lesson from './components/Lesson.jsx';
-
 import Addlesson from './components/addlesson.jsx';
 
 import Update from './components/Updateuser.jsx'
 
 import LessonsfUser from './components/testpages/LessonsfUser.jsx';
 import LessonLevel from './components/testpages/lessonslevel.jsx';
+import AllLessons from './components/AllLessons.jsx';
 
 
 
@@ -41,26 +41,21 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/admin" element={<Admin/>}/>
       <Route path="/user" element={<User publicId={publicId } setLessondata={setLessondata}/>}/>
-      <Route path="/user" element={<User publicId={publicId}/>}/>
 
       <Route path="/Update" element={<Update setPublicId={setPublicId} publicId={publicId}/>}/>
+      {/* //ahmed */}
       <Route path="/lesson" element={<Lesson lessondata={lessondata} />}/>
       <Route path="/lessonfUser" element={<LessonsfUser lessondata={lessondata}/>}/> 
 
       <Route path="/lesson" element={<Lesson/>}/>
-      <Route path="/lessonfUser" element={<LessonsfUser/>}/>
-
+      
       <Route path="/submit" element={<Submit/>}/>
       <Route path='/test' element={<Test/>}/>
       <Route path= "/test/:lan" element={<Testlvl/>}/>
-
+        <Route path='/user/alllessens' element={<AllLessons/>}/>
 
       <Route path= "/lesson/:lan" element={<LessonLevel/>}/>
-    
-      
-
       <Route path='/test/:languge/:level' element={<Quiz/>}/>
-
       <Route path='/userslist' element={<Users/>}/>
       <Route path='/lessonslist' element={<LessonsList/>}/>
       <Route path='/update/:id' element={<UpdateRole/>}/>
@@ -71,7 +66,7 @@ function App() {
       <Route path='/stat' element={<Stat/>}/>
       <Route path='/searchLessons/:category' element={<SearchLessons/>}/>
       <Route path='/addlesson' element={<Addlesson/>}/>
-
+      <Route path="/favoritList" element={<FavoritList/>}/>
 
 
       </Routes>

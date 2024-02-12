@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import NavBaruser from "./NavBaruser";
 import Fotter from "./Fotter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Addlesson = () => {
  
  const [category,setcategory]=useState('')
- const [userid,setuserid]=useState(0)
  const [url,seturl]=useState('')
+ const navigate = useNavigate()
 
- const lesson={category:category,user_iduser:userid}
+ const lesson={category:category}
  const link={urlvid:url}
  const addlesson=()=>{
-    axios.post("http://localhost:3600/admin/add",{lesson:lesson,link:link}).then(()=>{
+    axios.post("http://localhost:3600/admin/add",{lesson:lesson,link:link})
+    .then(()=>{
         console.log("done");
+        navigate("/lessonslist")
     }).catch((err)=>{
         console.log(err);
     })
@@ -43,21 +45,13 @@ const Addlesson = () => {
                     setcategory(e.target.value)
                   }}
               />
-              <input
-                type="number"
-                placeholder="id of the user"
-                className="border border-gray-300 px-4 py-2 rounded-md mb-2 w-full"
-                onChange={(e)=>{
-                    setuserid(e.target.value)
-                  }}
-              />
-              <Link to="/lessonslist">
+             
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
               onClick={()=>{
                 addlesson()
               }}>
                 Add Lesson
-              </button></Link>
+              </button>
             </div>
           </div>
         </div>

@@ -9,11 +9,7 @@ const User = ({ publicId,setLessondata}) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const decToken = jwtDecode(token);
-  const [userInfo, setUserInfo] = useState("");
-
-
-
- 
+  const [userInfo, setUserInfo] = useState(""); 
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -38,11 +34,14 @@ const User = ({ publicId,setLessondata}) => {
         console.log(res.data,"this is the vedio");
         setLessondata(res.data)
       }).catch((err)=>{console.log(err);})   
+      
 
   },[]);
 
-
- 
+  const logout =()=>{
+    localStorage.clear()
+    navigate('/')
+}
     
   return (
     <div>
@@ -50,12 +49,22 @@ const User = ({ publicId,setLessondata}) => {
         <div className="container mx-auto flex items-center justify-between">
           <div className="text-white font-bold text-xl">ANYA</div>
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-white hover:text-gray-300">
-              Favorit
-            </a>
+            <a   onClick={()=>{
+              navigate('/test')
+            }} className="text-white hover:text-gray-300" >
+             
+            quiz</a>
             <a onClick={() => {      navigate('/lessonfUser'); }} href="#" className="text-white hover:text-gray-300">
               Lessons
             </a>
+             <a onClick={() => { navigate('/user/alllessens') }} className="text-white hover:text-gray-300">
+              My lessons
+            </a>
+            <a onClick={() => { logout(); }} className="text-white hover:text-gray-300">
+              Log out
+            </a>
+           
+
             <div className="flex items-center">
               <img
                 onClick={() => { navigate('/Update'); }}

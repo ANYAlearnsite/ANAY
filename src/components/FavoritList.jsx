@@ -53,7 +53,19 @@ const FavoritList = () => {
               <div className=" p-4 rounded-md">
                 <p className="font-semibold">Lesson ID: {e.idlessons}</p>
                 <p>Category: {e.category}</p>
-                <video src={e.urlvid} controls width="300" height="200"></video>
+                <iframe
+                  width="325"
+                  height="250"
+                  src={
+                    "https://www.youtube.com/embed/" +
+                    e.urlvid +
+                    "?enablejsapi=1"
+                  }
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
                 <button
                   className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg mt-2"
                   onClick={() => {

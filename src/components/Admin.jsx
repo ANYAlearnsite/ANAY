@@ -21,7 +21,7 @@ const Admin = () => {
       })
       .then((data) => {
         // console.log("data for the admin ", data.data);
-        setData(data.data[0]);
+        setData(data.data);
       })
       .then(() => {
         setUserInfo(jwtDecode(token).user);
@@ -35,7 +35,7 @@ const Admin = () => {
     <div>
      <NavBaruser/>
     <div className="flex h-screen">
-      <div className="bg-blue-100 w-64 py-4 px-6">
+      <div className="bg-cyan-600 w-64 py-4 px-6">
         <ul className="sidebar-nav">
           <Link to="/admin"><li className="text-gray-800 font-semibold mb-4">Dashboard</li></Link>
           <li>

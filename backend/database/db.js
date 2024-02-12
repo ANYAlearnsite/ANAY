@@ -3,7 +3,8 @@ var mysql = require('mysql2');
 const con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "22802888",
+  password: "21018965",
+
   database: "learn"
 }).promise();
 
@@ -29,9 +30,9 @@ module.exports = {
     singup : singup,
     getuser : getuser,
     getall :getall,
-   
+    con : con
 }
-module.exports=con
+
     
  
     

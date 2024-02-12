@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import SearchLesson from "./SearchLesson";
 import { jwtDecode } from "jwt-decode";
+import NavBaruser from "./NavBaruser";
 const AllLessons = () => {
   const [lessons, setLessons] = useState([]);
   const [refresh, setRefresh] = useState(false);
@@ -45,7 +46,7 @@ const AllLessons = () => {
 
   return (
     <div className="bg-indigo-100">
-      <NavBar />
+      <NavBaruser />
       <div className="container mx-auto px-4 md:px-8">
         <h1 className="text-3xl text-bold text-center text-indigo-600 bg-indigo-100 rounded-lg p-4 mt-8 mb-4 font-bold uppercase">
           All Lessons
@@ -64,7 +65,19 @@ const AllLessons = () => {
           <div className="p-4 rounded-md">
             <p className="font-semibold text-lg">Lesson ID: {e.idlessons}</p>
             <p className="text-gray-600">Category: {e.category}</p>
-            <video src={e.urlvid} controls width="300" height="200"></video>
+            <iframe
+                  width="325"
+                  height="250"
+                  src={
+                    "https://www.youtube.com/embed/" +
+                    e.urlvid +
+                    "?enablejsapi=1"
+                  }
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
             <button
               className="mt-4 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
               onClick={() => {
