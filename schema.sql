@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`user` (
   `image` VARCHAR(255) NOT NULL DEFAULT 'https://shorturl.at/dGPRW',
   PRIMARY KEY (`iduser`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`lessons` (
     FOREIGN KEY (`user_iduser`)
     REFERENCES `learn`.`user` (`iduser`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -85,6 +86,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`lessons_link` (
     FOREIGN KEY (`lessons_idlessons`)
     REFERENCES `learn`.`lessons` (`idlessons`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

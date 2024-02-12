@@ -19,6 +19,7 @@ const getuser =(x)=>{
     return con.query(sql,x)
 }
 
+
 const getall = ()=>{
     const sql = `SELECT * FROM user `
     return con.query(sql)
