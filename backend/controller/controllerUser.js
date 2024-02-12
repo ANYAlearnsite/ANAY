@@ -87,6 +87,7 @@ UpdateImage : async (req,res)=>{
   }catch(err){throw(err)}
 
 },
+
 InsertScore : async (req,res)=>{
   const score = req.body.score;
   const iduser = req.body.iduser;
@@ -99,4 +100,4 @@ InsertScore : async (req,res)=>{
     throw(err)
   }
 }
-  
+}

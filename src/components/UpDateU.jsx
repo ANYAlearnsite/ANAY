@@ -35,11 +35,11 @@ const UpDateU = () => {
   return (
     <div>
       <NavBar />
-      <div className="flex items-center justify-center h-screen bg-gradient-to-r from-cyan-500 to-blue-50">
-        <div class=" w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex items-center justify-center h-screen bg-sky-200">
+        <div class=" w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-20 dark:bg-gray-800  dark:border-gray-700">
           <div class="space-y-6" action="#">
-            <h1 className="text-3xl font-bold mt-8 mb-4">
-              Update User Information
+            <h1 className="text-3xl font-bold mt-8 mb-4 text-white">
+              Update Your Information
             </h1>
             <div className="flex flex-col">
               <div>
@@ -77,11 +77,11 @@ const UpDateU = () => {
               <Link to="/User">
                 {" "}
                 <button
-                  className="bg-blue-500 hover:bg-blue-600 text-white  text-center"
+                  className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg mt-2"
                   onClick={update}
                 >
                   {" "}
-                  Confirme{" "}
+                  Confirm{" "}
                 </button>
               </Link>
             </div>

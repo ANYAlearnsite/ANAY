@@ -54,7 +54,7 @@ function App() {
       <Route path='/test/:languge/:level' element={<Quiz/>}/>
 
       <Route  path='/test/:languge/:level' element={<Quiz/>}/>
-      <Route path="/test/scoreLevel" element={<ScoreLevel/>}/>
+    
 
       <Route path='/userslist' element={<Users/>}/>
       <Route path='/lessonslist' element={<LessonsList/>}/>
