@@ -2,9 +2,8 @@ var mysql = require('mysql2');
 
 const con = mysql.createConnection({
   host: "localhost",
-  user: "yessine",
-  password: "yessine147",
-
+  user: "root",
+  password: "22802888",
   database: "learn"
 }).promise();
 
@@ -18,6 +17,7 @@ const getuser =(x)=>{
     const sql = `SELECT * FROM user WHERE email = ?`
     return con.query(sql,x)
 }
+
 
 const getall = ()=>{
     const sql = `SELECT * FROM user `

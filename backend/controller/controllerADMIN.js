@@ -104,7 +104,6 @@ const getoneus=async(req,res)=>{
         console.log(err);
     }}
 }
-
 const createlesson=async(req,res)=>{
     try{
         let lesson = req.body.lesson
@@ -128,4 +127,4 @@ const searchcatego=async(req,res)=>{
     }}
 }
 
-module.exports={fetchallusers,searchcatego,createlesson,fetchalltests,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}
+module.exports={fetchallusers,searchcatego,fetchalltests,createlesson,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}

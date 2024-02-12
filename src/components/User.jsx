@@ -5,16 +5,19 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
-const User = ({ publicId }) => {
+const User = ({ publicId,setLessondata}) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const decToken = jwtDecode(token);
-
   const [userInfo, setUserInfo] = useState("");
+
+
+
+ 
   const [data, setData] = useState("");
 
   useEffect(() => {
-    axios
+   const getuserinfo= axios
       .get(`http://localhost:3600/getusers`, {
         headers: {
           Autho: token,
@@ -22,6 +25,7 @@ const User = ({ publicId }) => {
 
       })
       .then((data) => {
+
         setData(data.data);
       })
       .then(() => {
@@ -30,7 +34,15 @@ const User = ({ publicId }) => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+      const getLesson= axios.get("http://localhost:3600/user/getAll").then((res)=>{
+        console.log(res.data,"this is the vedio");
+        setLessondata(res.data)
+      }).catch((err)=>{console.log(err);})   
+
+  },[]);
+
+
+ 
     
   return (
     <div>
@@ -41,7 +53,7 @@ const User = ({ publicId }) => {
             <a href="#" className="text-white hover:text-gray-300">
               Favorit
             </a>
-            <a onClick={() => { navigate('/lessonfUser'); }} href="#" className="text-white hover:text-gray-300">
+            <a onClick={() => {      navigate('/lessonfUser'); }} href="#" className="text-white hover:text-gray-300">
               Lessons
             </a>
             <div className="flex items-center">
