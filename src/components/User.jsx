@@ -14,8 +14,7 @@ const User = ({ publicId }) => {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3600/getusers`, {
+    axios.get(`http://localhost:3600/getusers`, {
         headers: {
           Autho: token,
         },

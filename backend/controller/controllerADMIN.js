@@ -128,4 +128,4 @@ const searchcatego=async(req,res)=>{
     }}
 }
 
-module.exports={fetchallusers,searchcatego,createlesson,fetchalltests,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}
+module.exports={fetchallusers,searchcatego,createlesson,fetchalltests,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus} 
