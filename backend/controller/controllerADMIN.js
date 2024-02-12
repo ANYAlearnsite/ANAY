@@ -104,6 +104,27 @@ const getoneus=async(req,res)=>{
         console.log(err);
     }}
 }
+const createlesson=async(req,res)=>{
+    try{
+        let lesson = req.body.lesson
+        let link=req.body.link
 
+         db.addlesson(lesson,link)
+        res.send("added !")
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
+const searchcatego=async(req,res)=>{
+    const categ=req.params.category
+    try{
+        const data=await db.searchbycategory(categ)
+        res.json(data)
+    }
+    catch{(err)=>{
+        console.log(err);
+    }}
+}
 
-module.exports={fetchallusers,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}
+module.exports={fetchallusers,searchcatego,fetchalltests,createlesson,fetchalllessons,fetchallvideoslessons,adduserrr,removeuser,updated,uplesson,dllesson,getoneus}

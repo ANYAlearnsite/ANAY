@@ -18,20 +18,14 @@ import Searchuser from './components/searchuser.jsx';
 import Stat from './components/stat.jsx';
 import SearchLessons from './components/searchlessons.jsx';
 import Lesson from './components/Lesson.jsx';
-import UpDateU from "./components/UpDateU.jsx";
+
 import Addlesson from './components/addlesson.jsx';
 
 import Update from './components/Updateuser.jsx'
-import { useState } from 'react';
-import Lesson from './components/Lesson.jsx'; 
 
 import LessonsfUser from './components/testpages/LessonsfUser.jsx';
 import LessonLevel from './components/testpages/lessonslevel.jsx';
 
-import AllLessons from './components/AllLessons.jsx';
-import FavoritList from './components/FavoritList.jsx';
-import SearchLesson from './components/SearchLesson.jsx';
-import UpDateU from './components/UpDateU.jsx';
 
 
 
