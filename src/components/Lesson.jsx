@@ -12,13 +12,19 @@ const Lesson = ({ lessondata }) => {
       <div className="flex justify-center flex-wrap gap-6">
         {lessondata.map((e, i) => (
           <div key={i} className="max-w-md w-full rounded-lg overflow-hidden shadow-md bg-white">
-            <a href="#!">
-              <video width="100%" height="auto" controls className="rounded-t-lg">
-              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4https://www.youtube.com/watch?v=cExLQ1o2pDw" type="video/mp4"/>
-             
-                Your browser does not support the video tag.
-              </video>
-            </a>
+              <iframe
+                  width="325"
+                  height="250"
+                  src={
+                    "https://www.youtube.com/embed/" +
+                    e.urlvid +
+                    "?enablejsapi=1"
+                  }
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
             <div className="p-6">
               <h5 className="text-gray-900 text-xl font-medium mb-2">Video Card</h5>
               <p className="text-gray-700 text-base mb-4">

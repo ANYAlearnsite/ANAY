@@ -18,6 +18,19 @@ CREATE SCHEMA IF NOT EXISTS `learn` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb
 USE `learn` ;
 
 -- -----------------------------------------------------
+-- Table `learn`.`lessons`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `learn`.`lessons` (
+  `idlessons` INT NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idlessons`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
 -- Table `learn`.`user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `learn`.`user` (
@@ -29,25 +42,7 @@ CREATE TABLE IF NOT EXISTS `learn`.`user` (
   `image` VARCHAR(255) NOT NULL DEFAULT 'https://shorturl.at/dGPRW',
   PRIMARY KEY (`iduser`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
-
--- -----------------------------------------------------
--- Table `learn`.`lessons`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `learn`.`lessons` (
-  `idlessons` INT NOT NULL AUTO_INCREMENT,
-  `category` VARCHAR(45) NOT NULL,
-  `user_iduser` INT NOT NULL,
-  PRIMARY KEY (`idlessons`),
-  INDEX `fk_lessons_user1_idx` (`user_iduser` ASC) VISIBLE,
-  CONSTRAINT `fk_lessons_user1`
-    FOREIGN KEY (`user_iduser`)
-    REFERENCES `learn`.`user` (`iduser`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
+AUTO_INCREMENT = 7
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

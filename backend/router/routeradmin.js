@@ -11,6 +11,7 @@ Routeradmin.get("/allusers",admincontroller.fetchallusers)
 Routeradmin.get('/alllessons',admincontroller.fetchalllessons)
 Routeradmin.get('/allvideoslessons',admincontroller.fetchallvideoslessons)
 Routeradmin.post('/adduser',admincontroller.adduserrr)
+
 Routeradmin.delete('/delet/:id',admincontroller.removeuser)
 Routeradmin.put('/update/:id',admincontroller.updated)
 Routeradmin.put('/updatelesson/:id',admincontroller.uplesson)

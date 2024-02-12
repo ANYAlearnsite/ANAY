@@ -14,7 +14,7 @@ const Users = () => {
     axios.get("http://localhost:3600/admin/allusers")
       .then((results) => {
         console.log('data fetched');
-        setdatausers(results.data[0]);
+        setdatausers(results.data);
       })
       .catch((err) => {
         console.log(err);

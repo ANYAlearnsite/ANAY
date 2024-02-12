@@ -15,8 +15,8 @@ const Searchuser = () => {
     axios.get(`http://localhost:3600/admin/one/${name}`)
       .then((res) => {
         console.log("found");
-        console.log(res.data[0]);
-        setOne(res.data[0]);
+        console.log(res.data);
+        setOne(res.data);
       })
       .catch((err) => {
         console.log(err);
